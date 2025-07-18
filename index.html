@@ -1,67 +1,105 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>Guillermo Hernández - Portfolio</title>
-  <link rel="stylesheet" href="styles.css" />
-  <script src="https://kit.fontawesome.com/a076d05399.js" crossorigin="anonymous"></script>
+  <meta charset="UTF-8">
+  <title>Guillermo Hernández - Machine Learning Engineer</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <!-- Hoja de estilos personalizada -->
+  <link rel="stylesheet" href="styles.css">
+  <!-- Font Awesome para íconos sociales -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
 </head>
 <body>
   <header>
-  <div class="header-left">
-    <div class="menu-toggle">☰</div>
-    <a href="docs/CV-GuillermoHernandez_SwDevML.pdf" target="_blank" class="cv-button">
-      <div class="name">Guillermo Hernández</div>
-      <div class="specialty">Machine Learning Engineer</div>
-    </a>
-  </div>
-  <nav class="header-buttons">
-    <a href="#projects">Projects</a>
-    <a href="#about">About me</a>
-  </nav>
-</header>
+    <div class="header-container">
+      <div class="header-left">
+        
+    <div class="header-left">
+      <div class="menu-toggle">☰</div>
+      <a href="docs/CV-GuillermoHernandez_SwDevML.pdf" target="_blank" class="cv-button">
+        <span class="name">Guillermo Hernández</span>
+        <span class="specialty">Machine Learning Engineer</span>
+      </a>
+    </div>
+    
+        <a href="docs/CV-GuillermoHernandez_SwDevML.pdf" target="_blank" class="header-title">
+          <span>Guillermo Hernández</span><br>
+          <small>Machine Learning Engineer</small>
+        </a>
+      </div>
+      <nav>
+        <a href="#projects">My Work</a>
+        <a href="#projects">Projects</a>
+        <a href="#about">About Me</a>
+      </nav>
+    </div>
+  </header>
 
-  <section id="intro">
-    <div class="section-title">Welcome</div>
-    <div class="intro-container">
-      <div class="intro-text">
-        <h2>Hi, I'm Guillermo</h2>
-        <p>
-          I'm a software engineer specialized in machine learning based in Mexico City. I build intelligent systems using technologies such as Python, scikit-learn, pandas, NumPy, TensorFlow, and more.
-        </p>
+  <section class="intro">
+    <div class="intro-text">
+      <div class="welcome">Welcome</div>
+      <div class="section-box">
+        <p>My name is Guillermo. I am a software engineer specialized in machine learning based in Mexico City. I work with tools and libraries such as Python, NumPy, Pandas, Scikit-learn, TensorFlow, Jupyter, and SQL to build data-driven and intelligent systems. I am committed to continuous development and the creation of practical solutions using artificial intelligence.</p>
       </div>
-      <div class="intro-image">
-        <!-- Imagen futura -->
-        <img src="path/to/your-image.jpg" alt="Profile or coding illustration" />
-      </div>
+    </div>
+    <div>
+      <img src="https://via.placeholder.com/300x200.png?text=Your+Photo+Here" alt="Profile or coding image">
     </div>
   </section>
 
   <section id="projects">
-    <div class="section-title">My Work</div>
+    <div class="section-label">My Work</div>
     <div class="section-box">
-      <!-- Aquí van tus proyectos -->
-      <p>Project grid or cards...</p>
-    </div>
-  </section>
-
-  <section id="about">
-    <div class="section-title">About Me</div>
-    <div class="section-box">
-      <p>
-        Software engineer focused on machine learning and data-driven solutions. Based in Mexico City. Graduate of Universidad del Valle de México.
-      </p>
-      <div class="social-icons">
-        <a href="#"><i class="fab fa-linkedin"></i></a>
-        <a href="#"><i class="fab fa-github"></i></a>
-        <a href="#"><i class="fab fa-facebook"></i></a>
+      <div class="projects-grid">
+        <div class="project">
+          <img src="https://via.placeholder.com/400x200.png?text=Project+1" alt="Project 1">
+          <h3>Project Title</h3>
+          <p>Brief description of the project.</p>
+          <a href="#">View Project</a>
+        </div>
+        <div class="project">
+          <img src="https://via.placeholder.com/400x200.png?text=Project+2" alt="Project 2">
+          <h3>Project Title</h3>
+          <p>Brief description of the project.</p>
+          <a href="#">View Project</a>
+        </div>
       </div>
     </div>
   </section>
 
+  <section id="about">
+    <div class="section-label">About Me</div>
+    <div class="section-box">
+      <p>I am currently in the final stage of my Software and Network Design Engineering degree at Universidad del Valle de México. With a strong foundation in software development, networks, and data management, I am building a career focused on machine learning and intelligent systems engineering. I approach my work with dedication, a structured mindset, and clear goals.</p>
+      <p>Mexico City</p>
+      <p>Universidad del Valle de México</p>
+      <p>Specialized in Machine Learning & Intelligent Systems</p>
+      <div class="social-buttons">
+        <a href="https://www.linkedin.com/in/guillermohzcz" target="_blank" aria-label="LinkedIn"><i class="fab fa-linkedin"></i></a>
+        <a href="https://github.com/guillermohzc" target="_blank" aria-label="GitHub"><i class="fab fa-github"></i></a>
+        <a href="https://www.facebook.com" target="_blank" aria-label="Facebook"><i class="fab fa-facebook"></i></a>
+      </div>
+    </div>
+
+    <div class="contact-form">
+      <div class="section-label">Contact Me</div>
+      <form>
+        <input type="text" placeholder="Name" required>
+        <input type="text" placeholder="Company">
+        <input type="tel" placeholder="Phone">
+        <input type="email" placeholder="Email" required>
+        <input type="submit" value="Submit">
+      </form>
+    </div>
+  </section>
+
   <footer>
-    <p>© 2025 guillermohz.dev</p>
+    <p>© 2025 - guillermohzc.github.io</p>
+    <div class="social-icons">
+      <a href="https://github.com/guillermohzc" target="_blank" aria-label="GitHub"><i class="fab fa-github"></i></a>
+      <a href="https://www.linkedin.com/in/guillermohzcz" target="_blank" aria-label="LinkedIn"><i class="fab fa-linkedin"></i></a>
+      <a href="https://www.facebook.com" target="_blank" aria-label="Facebook"><i class="fab fa-facebook"></i></a>
+    </div>
   </footer>
 </body>
 </html>
