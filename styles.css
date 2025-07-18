@@ -4,7 +4,6 @@ body {
   background: #f5f5f5;
 }
 
-/* HEADER AJUSTADO */
 header {
   background: #1a1a1a;
   color: #fff;
@@ -50,7 +49,6 @@ header {
   padding-right: 2vw;
 }
 
-/* Botón de menú solo icono SVG, sin 3D */
 .menu-btn {
   width: 52px;
   height: 52px;
@@ -72,7 +70,6 @@ header {
   background: #292929;
 }
 
-/* Botón nombre/rol SIN 3D, plano, igual de alto que el header */
 .cv-btn {
   display: flex;
   flex-direction: column;
@@ -111,7 +108,6 @@ header {
   letter-spacing: 0.01em;
 }
 
-/* Projects/About me - 3D MÁS NOTORIO Y BORDES CUADRADOS */
 .header-btn {
   display: flex;
   align-items: center;
@@ -119,7 +115,7 @@ header {
   padding: 0 28px;
   background: #232323;
   color: #fff;
-  border-radius: 4px; /* Bordes cuadrados */
+  border-radius: 4px;
   font-weight: bold;
   text-decoration: none;
   font-size: 1em;
@@ -149,61 +145,75 @@ header {
     inset -4px -4px 11px #666;
 }
 
-
-/* INTRO SECTION - BIENVENIDA MODERNA */
+/* INTRO SECTION ESPACIO COMPLETO */
 .intro-section {
   width: 100vw;
+  min-height: 100vh;
   display: flex;
   flex-direction: column;
-  justify-content: flex-start;
+  justify-content: center;
   align-items: center;
-  min-height: 380px;
-  margin-top: 0;
-  padding-top: 60px;
   position: relative;
+  padding: 0;
+  margin: 0;
+  background: none;
 }
 
-.welcome-animated {
-  font-size: 3.2em;
-  font-weight: bold;
-  color: #181871;
-  margin-bottom: 0.10em;
-  margin-left: 0.2em;
-  letter-spacing: 0.06em;
-  text-shadow: 0 8px 32px #a0a3ff44, 0 2px 8px #2226;
-  opacity: 0;
-  transform: translateY(32px) scale(0.96);
-  transition: opacity 0.8s cubic-bezier(.45,1.5,.6,1.01), transform 0.8s cubic-bezier(.45,1.5,.6,1.01);
-  user-select: none;
-  pointer-events: none;
-}
-.welcome-animated.active {
-  opacity: 1;
-  transform: translateY(0) scale(1.06);
-  transition: opacity 0.8s cubic-bezier(.45,1.5,.6,1.01), transform 0.8s cubic-bezier(.45,1.5,.6,1.01);
-}
-
-/* INTRO VENTANA */
 .intro-window {
   background: #fff;
   border-radius: 20px;
   box-shadow: 0 8px 32px 0 rgba(80,80,160,0.08), 0 2px 8px #2222;
   width: 90vw;
   max-width: 900px;
-  min-height: 260px;
+  min-height: 320px;
   display: flex;
+  flex-direction: column;
   align-items: stretch;
-  justify-content: center;
-  margin-bottom: 2em;
+  justify-content: flex-start;
+  position: relative;
+}
+
+.welcome-typewriter {
+  position: absolute;
+  top: 30px;
+  left: 38px;
+  z-index: 3;
+  font-size: 2.6em;
+  color: #111;
+  font-weight: bold;
+  letter-spacing: 0.04em;
+  pointer-events: none;
+  user-select: none;
+  background: transparent;
+  min-width: 210px;
+  min-height: 1.2em;
+  white-space: pre;
+}
+
+.type-cursor {
+  display: inline-block;
+  font-weight: 900;
+  font-size: 1em;
+  color: #111;
+  animation: blink-cursor .8s steps(1) infinite;
+  margin-left: 1px;
+}
+
+@keyframes blink-cursor {
+  0%, 100% { opacity: 1; }
+  50% { opacity: 0; }
 }
 
 .intro-content {
   display: flex;
   flex-direction: row;
   width: 100%;
+  min-height: 230px;
   height: 100%;
-  padding: 32px;
+  padding: 70px 32px 32px 32px;
   gap: 32px;
+  z-index: 1;
+  position: relative;
 }
 
 .intro-text {
@@ -232,15 +242,20 @@ header {
 /* RESPONSIVE INTRO */
 @media (max-width: 900px) {
   .intro-window {
-    flex-direction: column;
-    padding: 0;
     width: 97vw;
     min-width: 0;
   }
   .intro-content {
     flex-direction: column;
     gap: 18px;
-    padding: 18px 12px;
+    padding: 90px 12px 18px 12px;
+    min-height: 180px;
+  }
+  .welcome-typewriter {
+    top: 18px;
+    left: 12px;
+    font-size: 2em;
+    min-width: 110px;
   }
   .intro-text {
     font-size: 1.10em;
@@ -264,13 +279,13 @@ header {
     min-height: 62px;
   }
   .intro-section {
-    padding-top: 36px;
-    min-height: 200px;
+    min-height: 100vh;
   }
-  .welcome-animated {
-    font-size: 1.8em;
-    margin-left: 0;
-    margin-bottom: 0.3em;
+  .welcome-typewriter {
+    font-size: 1.1em;
+    top: 12px;
+    left: 10px;
+    min-width: 50px;
   }
   .intro-window {
     max-width: 99vw;
@@ -278,7 +293,8 @@ header {
     border-radius: 12px;
   }
   .intro-content {
-    padding: 11px 4px;
+    padding: 45px 4px 11px 4px;
+    min-height: 80px;
   }
   .intro-img img {
     max-width: 140px;
