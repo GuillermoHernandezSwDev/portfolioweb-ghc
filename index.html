@@ -41,6 +41,13 @@
       text-decoration: none;
       margin-left: 1rem;
       font-weight: 600;
+      padding: 0.5rem 1rem;
+      border-radius: 6px;
+      transition: background 0.3s, color 0.3s;
+    }
+    nav a:hover {
+      background-color: #ffffff22;
+      color: #fff;
     }
     section {
       display: flex;
@@ -129,13 +136,26 @@
       background: #e0e0e0;
     }
     h1 {
-      font-size: 1.3rem;
+      font-size: 1.6rem;
     }
     h1 small {
-      font-size: 0.8rem;
+      font-size: 0.9rem;
       display: block;
       margin-top: 0.2rem;
       color: #cccccc;
+    }
+    .cv-button {
+      display: inline-block;
+      background-color: #007BFF;
+      color: #fff;
+      padding: 0.4rem 0.8rem;
+      border-radius: 6px;
+      font-size: 0.85rem;
+      margin-top: 0.5rem;
+      text-decoration: none;
+    }
+    .cv-button:hover {
+      background-color: #0056b3;
     }
     .background-shape {
       position: absolute;
@@ -169,7 +189,11 @@
   <header>
     <div style="display: flex; align-items: center;">
       <div class="menu-toggle">☰</div>
-      <h1><a href="docs/Guillermo_Hernandez_CV.pdf" target="_blank" style="color: white; text-decoration: none;">Guillermo Hernández<br><small>Machine Learning Engineer</small></a></h1>
+      <h1>
+        Guillermo Hernández<br>
+        <small>Machine Learning Engineer</small>
+        <a class="cv-button" href="docs/CV-GuillermoHernandez_SwDevML.pdf" target="_blank">Download CV</a>
+      </h1>
     </div>
     <nav>
       <a href="#projects">Projects</a>
@@ -180,13 +204,16 @@
 
   <section class="intro">
     <div class="section-box intro-text">
-      <h2>Machine Learning Engineer</h2>
-      <p>I am currently studying Software and Network Design Engineering at UVM. My professional interest lies in the application of machine learning to solve real-world problems efficiently. I am strengthening my background in Python, SQL, data analysis, and AI tools, aiming to contribute to the development of intelligent systems.</p>
+      <h2>Welcome</h2>
+      <p>My name is Guillermo. I am a software engineer specialized in machine learning, based in Mexico City. I work with tools and libraries such as Python, NumPy, Pandas, Scikit-learn, TensorFlow, Jupyter, and SQL to build data-driven and intelligent systems. I am committed to continuous development and the creation of practical solutions using artificial intelligence.</p>
       <div class="tech-buttons" style="margin-top: 1rem;">
-        <span>Python</span><span>SQL (MySQL)</span><span>Git/GitHub</span><span>Excel</span><span>Jupyter Lab</span>
+        <span>Python</span><span>SQL (MySQL)</span><span>Git/GitHub</span><span>Excel</span><span>Jupyter Lab</span><span>Scikit-learn</span><span>TensorFlow</span><span>Pandas</span>
       </div>
     </div>
-    <img src="https://via.placeholder.com/300x200.png?text=Your+Photo+Here" alt="Profile or coding image">
+    <div>
+      <img src="https://via.placeholder.com/300x200.png?text=Your+Photo+Here" alt="Profile or coding image">
+      <p style="margin-top: 1rem; font-size: 0.85rem;">📄 You can view my CV above</p>
+    </div>
   </section>
 
   <section id="projects">
@@ -218,7 +245,7 @@
   <section id="about">
     <div class="section-box">
       <h2>About Me</h2>
-      <p>I am Guillermo Hernández Cruz, currently in the final stage of my Software and Network Design Engineering degree at Universidad del Valle de México. With a strong foundation in software development, networks, and data management, I am developing a career path focused on machine learning and intelligent systems engineering. I value precision, efficiency, and practical impact in every solution I build.</p>
+      <p>I am Guillermo Hernández Cruz, currently in the final stage of my Software and Network Design Engineering degree at Universidad del Valle de México. With a strong foundation in software development, networks, and data management, I am developing a career path focused on machine learning and intelligent systems engineering. I approach my work with dedication, a structured mindset, and clear goals.</p>
       <br>
       <p><strong>Location:</strong> Álvaro Obregón, Ciudad de México</p>
       <p><strong>Education:</strong> Universidad del Valle de México — Ingeniería en Diseño de Software y Redes</p>
