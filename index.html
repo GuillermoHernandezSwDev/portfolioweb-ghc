@@ -35,6 +35,7 @@
     .menu-toggle {
       font-size: 1.5rem;
       cursor: pointer;
+      margin-right: 1rem;
     }
     .header-left a {
       color: white;
@@ -42,12 +43,15 @@
       padding: 0.5rem 1rem;
       border-radius: 8px;
       font-weight: bold;
-      box-shadow: 2px 2px 6px #000 inset;
-      transition: all 0.3s ease;
-      background-color: #2a2a2a;
+      background-color: transparent;
     }
-    .header-left a:hover {
-      background-color: #444;
+    .header-left a h1 {
+      font-size: 1.7rem;
+      margin-bottom: 0.2rem;
+    }
+    .header-left a small {
+      font-size: 0.9rem;
+      color: #cccccc;
     }
     nav a {
       color: #fff;
@@ -57,7 +61,7 @@
       padding: 0.5rem 1rem;
       border-radius: 6px;
       transition: all 0.3s ease;
-      box-shadow: 2px 2px 6px #000 inset;
+      box-shadow: inset 0 0 6px rgba(0,0,0,0.5);
       background-color: #2a2a2a;
     }
     nav a:hover {
@@ -197,12 +201,82 @@
       <div class="header-left" style="display: flex; align-items: center; gap: 1rem;">
         <div class="menu-toggle">☰</div>
         <a href="docs/CV-GuillermoHernandez_SwDevML.pdf" target="_blank">
-          Guillermo Hernández<br><small>Machine Learning Engineer</small>
+          <h1>Guillermo Hernández</h1>
+          <small>Machine Learning Engineer</small>
         </a>
       </div>
       <nav>
-        <a href="#projects">My Work</a>
+        <a href="#projects">Projects</a>
         <a href="#about">About Me</a>
       </nav>
     </div>
   </header>
+
+  <section class="intro">
+    <div class="intro-text">
+      <div class="welcome">Welcome</div>
+      <div class="section-box">
+        <p>My name is Guillermo. I am a software engineer specialized in machine learning based in Mexico City. I work with tools and libraries such as Python, NumPy, Pandas, Scikit-learn, TensorFlow, Jupyter, and SQL to build data-driven and intelligent systems. I am committed to continuous development and the creation of practical solutions using artificial intelligence.</p>
+      </div>
+    </div>
+    <div>
+      <img src="https://via.placeholder.com/300x200.png?text=Your+Photo+Here" alt="Profile or coding image">
+    </div>
+  </section>
+
+  <section id="projects">
+    <div class="section-label">My Work</div>
+    <div class="section-box">
+      <div class="projects-grid">
+        <div class="project">
+          <img src="https://via.placeholder.com/400x200.png?text=Project+1" alt="Project 1">
+          <h3>Project Title</h3>
+          <p>Brief description of the project.</p>
+          <a href="#">View Project</a>
+        </div>
+        <div class="project">
+          <img src="https://via.placeholder.com/400x200.png?text=Project+2" alt="Project 2">
+          <h3>Project Title</h3>
+          <p>Brief description of the project.</p>
+          <a href="#">View Project</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section id="about">
+    <div class="section-label">About Me</div>
+    <div class="section-box">
+      <p>I am currently in the final stage of my Software and Network Design Engineering degree at Universidad del Valle de México. With a strong foundation in software development, networks, and data management, I am building a career focused on machine learning and intelligent systems engineering. I approach my work with dedication, a structured mindset, and clear goals.</p>
+      <p>Mexico City</p>
+      <p>Universidad del Valle de México</p>
+      <p>Specialized in Machine Learning & Intelligent Systems</p>
+      <div class="social-buttons">
+        <a href="https://www.linkedin.com/in/guillermohzcz" target="_blank"><i class="fab fa-linkedin"></i></a>
+        <a href="https://github.com/guillermohzc" target="_blank"><i class="fab fa-github"></i></a>
+        <a href="https://www.facebook.com" target="_blank"><i class="fab fa-facebook"></i></a>
+      </div>
+    </div>
+
+    <div class="contact-form">
+      <div class="section-label">Contact Me</div>
+      <form>
+        <input type="text" placeholder="Name" required>
+        <input type="text" placeholder="Company">
+        <input type="tel" placeholder="Phone">
+        <input type="email" placeholder="Email" required>
+        <input type="submit" value="Submit">
+      </form>
+    </div>
+  </section>
+
+  <footer>
+    <p>© 2025 - guillermohzc.github.io</p>
+    <div class="social-icons">
+      <a href="https://github.com/guillermohzc" target="_blank"><i class="fab fa-github"></i></a>
+      <a href="https://www.linkedin.com/in/guillermohzcz" target="_blank"><i class="fab fa-linkedin"></i></a>
+      <a href="https://www.facebook.com" target="_blank"><i class="fab fa-facebook"></i></a>
+    </div>
+  </footer>
+</body>
+</html>
