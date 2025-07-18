@@ -1,217 +1,96 @@
-body {
-  font-family: Arial, sans-serif;
-  margin: 0;
-  background: #f5f5f5;
-}
-
-header {
-  background: #222;
-  color: #fff;
-  padding: 1em 0;
-}
-
-.header-container {
-  display: flex;
-  align-items: center;
-  width: 100%;
-  max-width: 1100px;
-  justify-content: space-between;
-  margin: 0 auto;
-}
-
-.header-left {
-  display: flex;
-  align-items: center;
-  gap: 1rem;
-}
-
-.header-title {
-  color: #fff;
-  text-decoration: none;
-  line-height: 1.2;
-  font-size: 1.1em;
-  font-weight: bold;
-}
-
-nav a {
-  color: #fff;
-  margin-left: 1.5rem;
-  text-decoration: none;
-  font-weight: bold;
-}
-
-nav a:hover {
-  text-decoration: underline;
-}
-
-.menu-toggle {
-  font-size: 2em;
-  cursor: pointer;
-  margin-right: 1rem;
-}
-
-section {
-  padding: 2em 1em;
-  max-width: 900px;
-  margin: 0 auto;
-}
-
-.intro {
-  display: flex;
-  flex-wrap: wrap;
-  gap: 2em;
-  align-items: center;
-}
-
-.intro img {
-  border-radius: 8px;
-  max-width: 300px;
-}
-
-.intro-text {
-  flex: 1;
-}
-
-.welcome {
-  font-size: 1.5em;
-  font-weight: bold;
-  margin-bottom: .5em;
-}
-
-.section-label {
-  font-weight: bold;
-  font-size: 1.2em;
-  margin-bottom: .5em;
-}
-
-.section-box {
-  background: #fff;
-  padding: 1.5em;
-  border-radius: 8px;
-  margin-bottom: 1em;
-}
-
-.projects-grid {
-  display: flex;
-  flex-wrap: wrap;
-  gap: 2em;
-}
-
-.project {
-  background: #fafafa;
-  border-radius: 8px;
-  box-shadow: 0 2px 8px #0001;
-  padding: 1em;
-  flex: 1 1 260px;
-  max-width: 350px;
-}
-
-.project img {
-  border-radius: 4px;
-  width: 100%;
-}
-
-.social-buttons a,
-.social-icons a {
-  color: #222;
-  margin-right: .8em;
-  font-size: 1.5em;
-  transition: color 0.2s;
-}
-
-.social-buttons a:hover,
-.social-icons a:hover {
-  color: #0a66c2;
-}
-
-.contact-form {
-  background: #fff;
-  border-radius: 8px;
-  padding: 1.5em;
-  margin-top: 1em;
-}
-
-.contact-form input[type="text"],
-.contact-form input[type="tel"],
-.contact-form input[type="email"] {
-  width: 100%;
-  padding: .7em;
-  margin-bottom: 1em;
-  border: 1px solid #ccc;
-  border-radius: 4px;
-  font-size: 1em;
-}
-
-.contact-form input[type="submit"] {
-  background: #0a66c2;
-  color: #fff;
-  border: none;
-  padding: .8em 2em;
-  border-radius: 4px;
-  cursor: pointer;
-  font-size: 1em;
-}
-
-.contact-form input[type="submit"]:hover {
-  background: #084a92;
-}
-
-footer {
-  background: #222;
-  color: #fff;
-  padding: 1em 0;
-  text-align: center;
-}
-
-.social-icons {
-  margin-top: .5em;
-}
-
-@media (max-width: 700px) {
-  .intro {
-    flex-direction: column;
-  }
-  .projects-grid {
-    flex-direction: column;
-  }
-  .header-container {
-    flex-direction: column;
-    align-items: flex-start;
-  }
-  nav {
-    margin-top: 1em;
-  }
-}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Guillermo Hernández - Machine Learning Engineer</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <!-- Hoja de estilos personalizada -->
+  <link rel="stylesheet" href="styles.css">
+  <!-- Font Awesome para íconos sociales -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
+</head>
+<body>
+  
+<header>
+  <div class="header-left">
+    <div class="menu-toggle">☰</div>
+    <a href="docs/CV-GuillermoHernandez_SwDevML.pdf" target="_blank" class="cv-button">
+      <span class="name">Guillermo Hernández</span>
+      <span class="specialty">Machine Learning Engineer</span>
+    </a>
+  </div>
+  <nav class="header-buttons">
+    <a href="#projects">Projects</a>
+    <a href="#about">About me</a>
+  </nav>
+</header>
 
 
-.header-left {
-  display: flex;
-  align-items: center;
-  gap: 1em;
-}
+  <section class="intro">
+    <div class="intro-text">
+      <div class="welcome">Welcome</div>
+      <div class="section-box">
+        <p>My name is Guillermo. I am a software engineer specialized in machine learning based in Mexico City. I work with tools and libraries such as Python, NumPy, Pandas, Scikit-learn, TensorFlow, Jupyter, and SQL to build data-driven and intelligent systems. I am committed to continuous development and the creation of practical solutions using artificial intelligence.</p>
+      </div>
+    </div>
+    <div>
+      <img src="https://via.placeholder.com/300x200.png?text=Your+Photo+Here" alt="Profile or coding image">
+    </div>
+  </section>
 
-.cv-button {
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  color: white;
-  text-decoration: none;
-  padding: 0.2em 0.8em;
-  height: 100%;
-}
+  <section id="projects">
+    <div class="section-label">My Work</div>
+    <div class="section-box">
+      <div class="projects-grid">
+        <div class="project">
+          <img src="https://via.placeholder.com/400x200.png?text=Project+1" alt="Project 1">
+          <h3>Project Title</h3>
+          <p>Brief description of the project.</p>
+          <a href="#">View Project</a>
+        </div>
+        <div class="project">
+          <img src="https://via.placeholder.com/400x200.png?text=Project+2" alt="Project 2">
+          <h3>Project Title</h3>
+          <p>Brief description of the project.</p>
+          <a href="#">View Project</a>
+        </div>
+      </div>
+    </div>
+  </section>
 
-.cv-button:hover {
-  text-decoration: underline;
-}
+  <section id="about">
+    <div class="section-label">About Me</div>
+    <div class="section-box">
+      <p>I am currently in the final stage of my Software and Network Design Engineering degree at Universidad del Valle de México. With a strong foundation in software development, networks, and data management, I am building a career focused on machine learning and intelligent systems engineering. I approach my work with dedication, a structured mindset, and clear goals.</p>
+      <p>Mexico City</p>
+      <p>Universidad del Valle de México</p>
+      <p>Specialized in Machine Learning & Intelligent Systems</p>
+      <div class="social-buttons">
+        <a href="https://www.linkedin.com/in/guillermohzcz" target="_blank" aria-label="LinkedIn"><i class="fab fa-linkedin"></i></a>
+        <a href="https://github.com/guillermohzc" target="_blank" aria-label="GitHub"><i class="fab fa-github"></i></a>
+        <a href="https://www.facebook.com" target="_blank" aria-label="Facebook"><i class="fab fa-facebook"></i></a>
+      </div>
+    </div>
 
-.cv-button .name {
-  font-size: 1.1em;
-  font-weight: bold;
-  line-height: 1.2;
-}
+    <div class="contact-form">
+      <div class="section-label">Contact Me</div>
+      <form>
+        <input type="text" placeholder="Name" required>
+        <input type="text" placeholder="Company">
+        <input type="tel" placeholder="Phone">
+        <input type="email" placeholder="Email" required>
+        <input type="submit" value="Submit">
+      </form>
+    </div>
+  </section>
 
-.cv-button .specialty {
-  font-size: 0.75em;
-  color: #cccccc;
-  line-height: 1;
-}
+  <footer>
+    <p>© 2025 - guillermohzc.github.io</p>
+    <div class="social-icons">
+      <a href="https://github.com/guillermohzc" target="_blank" aria-label="GitHub"><i class="fab fa-github"></i></a>
+      <a href="https://www.linkedin.com/in/guillermohzcz" target="_blank" aria-label="LinkedIn"><i class="fab fa-linkedin"></i></a>
+      <a href="https://www.facebook.com" target="_blank" aria-label="Facebook"><i class="fab fa-facebook"></i></a>
+    </div>
+  </footer>
+</body>
+</html>
