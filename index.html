@@ -13,11 +13,15 @@
   
 <header>
   <nav class="main-header-nav">
+    <!-- IZQUIERDA: menú + nombre/rol -->
     <div class="header-left">
-      <a class="header-btn" href="#projects">Projects</a>
-      <a class="header-btn" href="#about">About me</a>
-    </div>
-    <div class="header-right">
+      <button class="menu-btn" aria-label="Menu">
+        <svg width="28" height="28" viewBox="0 0 28 28">
+          <rect y="5" width="28" height="3.5" rx="2" fill="#343434"/>
+          <rect y="12" width="28" height="3.5" rx="2" fill="#343434"/>
+          <rect y="19" width="28" height="3.5" rx="2" fill="#343434"/>
+        </svg>
+      </button>
       <a href="docs/CV-GuillermoHernandez_SwDevML.pdf" 
          target="_blank" 
          class="cv-btn" 
@@ -25,9 +29,11 @@
         <span class="cv-name">Guillermo Hernández</span>
         <span class="cv-role">Machine Learning Engineer</span>
       </a>
-      <button class="menu-btn" aria-label="Menu">
-        <i class="fas fa-bars"></i>
-      </button>
+    </div>
+    <!-- DERECHA: Projects/About -->
+    <div class="header-right">
+      <a class="header-btn" href="#projects">Projects</a>
+      <a class="header-btn" href="#about">About me</a>
     </div>
   </nav>
 </header>
