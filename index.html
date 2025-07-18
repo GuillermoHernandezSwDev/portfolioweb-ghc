@@ -53,6 +53,14 @@
       min-height: 100vh;
       text-align: center;
     }
+    .section-box {
+      background-color: #ffffffcc;
+      padding: 3rem;
+      border-radius: 16px;
+      box-shadow: 0 4px 20px rgba(0,0,0,0.05);
+      width: 100%;
+      max-width: 900px;
+    }
     .intro {
       flex-direction: row;
       text-align: left;
@@ -60,10 +68,6 @@
     }
     .intro-text {
       flex: 1;
-      background-color: #ffffffcc;
-      padding: 2rem;
-      border-radius: 12px;
-      box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
     }
     .intro img {
       max-width: 300px;
@@ -75,6 +79,7 @@
       display: grid;
       grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
       gap: 2rem;
+      margin-top: 2rem;
     }
     .project {
       background: #ffffffcc;
@@ -126,6 +131,12 @@
     h1 {
       font-size: 1.3rem;
     }
+    h1 small {
+      font-size: 0.8rem;
+      display: block;
+      margin-top: 0.2rem;
+      color: #cccccc;
+    }
     .background-shape {
       position: absolute;
       z-index: -1;
@@ -158,7 +169,7 @@
   <header>
     <div style="display: flex; align-items: center;">
       <div class="menu-toggle">☰</div>
-      <h1><a href="docs/Guillermo_Hernandez_CV.pdf" target="_blank" style="color: white; text-decoration: none;">Guillermo Hernández — Machine Learning Engineer</a></h1>
+      <h1><a href="docs/Guillermo_Hernandez_CV.pdf" target="_blank" style="color: white; text-decoration: none;">Guillermo Hernández<br><small>Machine Learning Engineer</small></a></h1>
     </div>
     <nav>
       <a href="#projects">Projects</a>
@@ -168,40 +179,51 @@
   </header>
 
   <section class="intro">
-    <div class="intro-text">
-      <h2>Machine Learning Engineer in Progress</h2>
-      <p>I am a passionate student of Software and Network Design Engineering at UVM, focused on becoming a professional in machine learning and intelligent systems. My main goal is to create data-driven solutions and bring automation and insights through artificial intelligence. I’m constantly developing my skills in Python, statistics, and cloud tools to achieve that dream.</p>
+    <div class="section-box intro-text">
+      <h2>Machine Learning Engineer</h2>
+      <p>I am currently studying Software and Network Design Engineering at UVM. My professional interest lies in the application of machine learning to solve real-world problems efficiently. I am strengthening my background in Python, SQL, data analysis, and AI tools, aiming to contribute to the development of intelligent systems.</p>
+      <div class="tech-buttons" style="margin-top: 1rem;">
+        <span>Python</span><span>SQL (MySQL)</span><span>Git/GitHub</span><span>Excel</span><span>Jupyter Lab</span>
+      </div>
     </div>
     <img src="https://via.placeholder.com/300x200.png?text=Your+Photo+Here" alt="Profile or coding image">
   </section>
 
   <section id="projects">
-    <h2>Projects</h2>
-    <div class="projects-grid">
-      <div class="project">
-        <img src="https://via.placeholder.com/400x200.png?text=Project+1" alt="Project 1">
-        <h3>Project Title</h3>
-        <p>Short description of the project.</p>
-        <div class="tech-buttons">
-          <span>Python</span><span>Flask</span><span>MySQL</span>
+    <div class="section-box">
+      <h2>Projects</h2>
+      <div class="projects-grid">
+        <div class="project">
+          <img src="https://via.placeholder.com/400x200.png?text=Project+1" alt="Project 1">
+          <h3>Project Title</h3>
+          <p>Short description of the project.</p>
+          <div class="tech-buttons">
+            <span>Python</span><span>Flask</span><span>MySQL</span>
+          </div>
+          <a href="#">View Project</a>
         </div>
-        <a href="#">View Project</a>
-      </div>
-      <div class="project">
-        <img src="https://via.placeholder.com/400x200.png?text=Project+2" alt="Project 2">
-        <h3>Project Title</h3>
-        <p>Short description of the project.</p>
-        <div class="tech-buttons">
-          <span>JavaScript</span><span>React</span><span>Node.js</span>
+        <div class="project">
+          <img src="https://via.placeholder.com/400x200.png?text=Project+2" alt="Project 2">
+          <h3>Project Title</h3>
+          <p>Short description of the project.</p>
+          <div class="tech-buttons">
+            <span>JavaScript</span><span>React</span><span>Node.js</span>
+          </div>
+          <a href="#">View Project</a>
         </div>
-        <a href="#">View Project</a>
       </div>
     </div>
   </section>
 
   <section id="about">
-    <h2>About Me</h2>
-    <p>Hello! My name is Guillermo Hernández Cruz, a 27-year-old software and data enthusiast from Mexico City. I’m currently pursuing a degree in Software and Network Design Engineering at UVM. I’ve been working in technical support but my goal is to specialize in machine learning. I’m taking courses in Python, SQL, machine learning and deep learning, and I enjoy building small projects that help me apply and strengthen what I learn. I believe in continuous improvement and I’m determined to join a top-level company where I can grow as a machine learning engineer.</p>
+    <div class="section-box">
+      <h2>About Me</h2>
+      <p>I am Guillermo Hernández Cruz, currently in the final stage of my Software and Network Design Engineering degree at Universidad del Valle de México. With a strong foundation in software development, networks, and data management, I am developing a career path focused on machine learning and intelligent systems engineering. I value precision, efficiency, and practical impact in every solution I build.</p>
+      <br>
+      <p><strong>Location:</strong> Álvaro Obregón, Ciudad de México</p>
+      <p><strong>Education:</strong> Universidad del Valle de México — Ingeniería en Diseño de Software y Redes</p>
+      <p><strong>Specialization:</strong> Machine Learning & Intelligent Systems</p>
+    </div>
   </section>
 
   <footer id="contact">
@@ -210,7 +232,7 @@
       <p>Feel free to connect with me through:</p>
       <div class="contact-links">
         <a href="mailto:guillermo.hzcz97@outlook.com">Email</a>
-        <a href="https://www.linkedin.com/in/guillermo-hernandez-cruz" target="_blank">LinkedIn</a>
+        <a href="https://www.linkedin.com/in/guillermohzcz" target="_blank">LinkedIn</a>
         <a href="https://github.com/guillermohzc" target="_blank">GitHub</a>
         <a href="tel:+525548031479">Phone</a>
       </div>
