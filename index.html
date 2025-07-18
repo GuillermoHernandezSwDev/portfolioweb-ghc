@@ -12,16 +12,21 @@
 <body>
   
 <header>
-  <div class="header-left">
-    <div class="menu-toggle">☰</div>
-    <a href="docs/CV-GuillermoHernandez_SwDevML.pdf" target="_blank" class="cv-button">
-      <span class="name">Guillermo Hernández</span>
-      <span class="specialty">Machine Learning Engineer</span>
-    </a>
-  </div>
-  <nav class="header-buttons">
-    <a href="#projects">Projects</a>
-    <a href="#about">About me</a>
+  <nav class="main-header-nav">
+    <div class="header-left">
+      <button class="menu-btn" aria-label="Menu"><i class="fas fa-bars"></i></button>
+      <a href="docs/CV-GuillermoHernandez_SwDevML.pdf" 
+         target="_blank" 
+         class="cv-btn" 
+         title="Curriculum Vitae">
+        <span class="cv-name">Guillermo Hernández</span>
+        <span class="cv-role">Machine Learning Engineer</span>
+      </a>
+    </div>
+    <div class="header-right">
+      <a class="header-nav-btn" href="#projects">Projects</a>
+      <a class="header-nav-btn" href="#about">About me</a>
+    </div>
   </nav>
 </header>
 
