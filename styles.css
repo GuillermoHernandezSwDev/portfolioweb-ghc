@@ -4,111 +4,64 @@ body {
   background: #f5f5f5;
 }
 
-/* HEADER: minimalista, barra completa, botones 3D incrustados */
 header {
-  width: 100vw;
   background: #1a1a1a;
   color: #fff;
+  width: 100vw;
   position: sticky;
   top: 0;
   z-index: 999;
+  min-height: 52px;
+  height: 52px;
   padding: 0;
 }
 
 .main-header-nav {
   display: flex;
   justify-content: space-between;
-  align-items: center;
+  align-items: stretch;
   max-width: 1200px;
   margin: 0 auto;
-  height: 72px;
-  padding: 0 36px;
+  height: 52px;
+  padding: 0 16px;
+}
+
+.header-left, .header-right {
+  display: flex;
+  align-items: stretch;
+  height: 100%;
 }
 
 .header-left {
-  display: flex;
-  align-items: center;
-}
-
-.menu-btn {
-  width: 44px;
-  height: 44px;
-  border: none;
-  background: #232323;
-  color: #fff;
-  font-size: 1.6em;
-  border-radius: 12px;
-  margin-right: 16px;
-  box-shadow: 
-    inset 2px 2px 6px #111, 
-    inset -2px -2px 6px #333;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  cursor: pointer;
-  transition: box-shadow 0.2s, background 0.2s;
-}
-.menu-btn:hover {
-  background: #333;
-  box-shadow: 
-    0 2px 8px #1113, 
-    inset 2px 2px 6px #101, 
-    inset -2px -2px 6px #444;
-}
-
-.cv-btn {
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  background: #232323;
-  border-radius: 12px;
-  padding: 9px 24px;
-  text-decoration: none;
-  margin-right: 24px;
-  box-shadow: 
-    inset 2px 2px 6px #111, 
-    inset -2px -2px 6px #333;
-  transition: box-shadow 0.2s, background 0.2s;
-  position: relative;
-}
-.cv-btn:hover {
-  background: #292929;
-  box-shadow: 0 2px 8px #0002;
-}
-.cv-name {
-  font-size: 1.18em;
-  color: #fff;
-  font-weight: 600;
-  line-height: 1.1;
-}
-.cv-role {
-  font-size: 0.89em;
-  color: #bbb;
-  font-weight: 400;
-  line-height: 1;
-  margin-top: 2px;
-  letter-spacing: 0.01em;
+  justify-content: flex-start;
 }
 
 .header-right {
-  display: flex;
-  align-items: center;
-  gap: 8px;
+  justify-content: flex-end;
+  gap: 0;
 }
 
+/* Projects/About me buttons - estilo 3D incrustado */
 .header-btn {
-  padding: 0.7em 1.7em;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 0 26px;
   background: #232323;
   color: #fff;
   border-radius: 12px;
   font-weight: bold;
   text-decoration: none;
   font-size: 1em;
-  margin-left: 8px;
-  box-shadow: 
-    inset 2px 2px 6px #111, 
-    inset -2px -2px 6px #333;
-  transition: box-shadow 0.2s, background 0.2s, transform 0.15s;
+  margin-right: 16px;
+  box-shadow: inset 2px 2px 7px #181818, inset -2px -2px 7px #393939;
+  height: 100%;
+  transition: box-shadow 0.18s, background 0.18s, transform 0.15s;
+  border: none;
+  outline: none;
+}
+.header-btn:last-child {
+  margin-right: 0;
 }
 .header-btn:hover {
   background: #333;
@@ -116,7 +69,96 @@ header {
   box-shadow: 0 2px 8px #0002;
 }
 
-/* Fin header */
+/* Botón de CV - 3D incrustado */
+.cv-btn {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  background: #232323;
+  border-radius: 12px;
+  padding: 7px 20px;
+  text-decoration: none;
+  margin-right: 10px;
+  box-shadow: inset 2px 2px 7px #181818, inset -2px -2px 7px #393939;
+  transition: box-shadow 0.2s, background 0.2s;
+  position: relative;
+  min-width: 170px;
+  align-items: flex-start;
+}
+.cv-btn:hover {
+  background: #292929;
+  box-shadow: 0 2px 8px #0002;
+}
+.cv-name {
+  font-size: 1.02em;
+  color: #fff;
+  font-weight: 600;
+  line-height: 1.1;
+}
+.cv-role {
+  font-size: 0.80em;
+  color: #bbb;
+  font-weight: 400;
+  line-height: 1;
+  margin-top: 2px;
+  letter-spacing: 0.01em;
+}
+
+/* Menu icono solo icono, sin 3D */
+.menu-btn {
+  width: 48px;
+  height: 100%;
+  border: none;
+  background: transparent;
+  color: #fff;
+  font-size: 1.7em;
+  border-radius: 0;
+  margin-left: 0;
+  margin-right: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  box-shadow: none;
+  transition: background 0.15s;
+}
+.menu-btn:hover {
+  background: #2c2c2c;
+}
+
+/* Responsive para header */
+@media (max-width: 800px) {
+  .main-header-nav {
+    padding: 0 2vw;
+  }
+  .cv-btn {
+    min-width: 120px;
+    padding: 7px 10px;
+  }
+  .header-btn {
+    padding: 0 12px;
+    font-size: 0.92em;
+  }
+}
+@media (max-width: 600px) {
+  .main-header-nav {
+    flex-direction: column;
+    height: auto;
+    padding: 0 4px;
+  }
+  .header-left, .header-right {
+    flex-direction: row;
+    width: 100%;
+    justify-content: space-between;
+  }
+  .header-btn, .cv-btn {
+    min-width: unset;
+    font-size: 0.92em;
+    margin-left: 3px;
+    margin-right: 0;
+    padding: 4px 8px;
+  }
+}
 
 section {
   padding: 2em 1em;
@@ -245,26 +287,4 @@ footer {
 
 .social-icons {
   margin-top: .5em;
-}
-
-@media (max-width: 700px) {
-  .intro {
-    flex-direction: column;
-  }
-  .projects-grid {
-    flex-direction: column;
-  }
-  .main-header-nav {
-    flex-direction: column;
-    height: auto;
-    padding: 0 10px;
-  }
-  .header-left, .header-right {
-    flex-direction: row;
-    gap: 4px;
-  }
-  .cv-btn, .header-btn {
-    padding: 7px 12px;
-    font-size: 0.96rem;
-  }
 }
