@@ -2,95 +2,20 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8">
+  <title>Guillermo Hernández - Machine Learning Engineer</title>
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Guillermo Hernández - Portfolio</title>
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600&display=swap" rel="stylesheet">
-  <script src="https://kit.fontawesome.com/a076d05399.js" crossorigin="anonymous"></script>
-  <style>
-    * {
-      margin: 0;
-      padding: 0;
-      box-sizing: border-box;
-      font-family: 'Inter', sans-serif;
-    }
-    html {
-      scroll-behavior: smooth;
-    }
-    body {
-      background-color: #f4f4f4;
-      color: #1a1a1a;
-      line-height: 1.6;
-    }
-    header {
-      background: #1a1a1a;
-      color: #fff;
-      padding: 0.4rem 1rem;
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
-      position: sticky;
-      top: 0;
-      z-index: 10;
-    }
-    .menu-toggle {
-      font-size: 1.2rem;
-      cursor: pointer;
-      margin-right: 1rem;
-    }
-    .header-left a {
-      color: white;
-      text-decoration: none;
-      padding: 0.4rem 0.8rem;
-      border-radius: 8px;
-      font-weight: bold;
-      background-color: transparent;
-    }
-    .header-left a h1 {
-      font-size: 1.4rem;
-      margin-bottom: 0.1rem;
-    }
-    .header-left a small {
-      font-size: 0.8rem;
-      color: #cccccc;
-    }
-    nav a {
-      color: #fff;
-      text-decoration: none;
-      margin-left: 1rem;
-      font-weight: 600;
-      padding: 0.4rem 0.9rem;
-      border-radius: 6px;
-      background-color: #1a1a1a;
-      box-shadow: inset 2px 2px 4px rgba(0,0,0,0.6), inset -2px -2px 4px rgba(255,255,255,0.05);
-      transition: all 0.3s ease;
-    }
-    nav a:hover {
-      background-color: #333;
-      transform: translateY(1px);
-    }
-    section {
-      display: flex;
-      flex-direction: column;
-      justify-content: center;
-      align-items: center;
-      padding: 4rem 2rem;
-      max-width: 1200px;
-      margin: auto;
-      min-height: 100vh;
-      text-align: center;
-      position: relative;
-    }
-    /* Resto del contenido permanece igual y continúa después */
-  </style>
+  <!-- Hoja de estilos personalizada -->
+  <link rel="stylesheet" href="styles.css">
+  <!-- Font Awesome para íconos sociales -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
 </head>
 <body>
   <header>
-    <div style="display: flex; align-items: center; width: 100%; justify-content: space-between;">
-      <div class="header-left" style="display: flex; align-items: center; gap: 1rem;">
+    <div class="header-container">
+      <div class="header-left">
         <div class="menu-toggle">☰</div>
-        <a href="docs/CV-GuillermoHernandez_SwDevML.pdf" target="_blank">
-          Guillermo Hernández<br><small>Machine Learning Engineer</small>
-          <h1>Guillermo Hernández</h1>
+        <a href="docs/CV-GuillermoHernandez_SwDevML.pdf" target="_blank" class="header-title">
+          <span>Guillermo Hernández</span><br>
           <small>Machine Learning Engineer</small>
         </a>
       </div>
@@ -142,9 +67,9 @@
       <p>Universidad del Valle de México</p>
       <p>Specialized in Machine Learning & Intelligent Systems</p>
       <div class="social-buttons">
-        <a href="https://www.linkedin.com/in/guillermohzcz" target="_blank"><i class="fab fa-linkedin"></i></a>
-        <a href="https://github.com/guillermohzc" target="_blank"><i class="fab fa-github"></i></a>
-        <a href="https://www.facebook.com" target="_blank"><i class="fab fa-facebook"></i></a>
+        <a href="https://www.linkedin.com/in/guillermohzcz" target="_blank" aria-label="LinkedIn"><i class="fab fa-linkedin"></i></a>
+        <a href="https://github.com/guillermohzc" target="_blank" aria-label="GitHub"><i class="fab fa-github"></i></a>
+        <a href="https://www.facebook.com" target="_blank" aria-label="Facebook"><i class="fab fa-facebook"></i></a>
       </div>
     </div>
 
@@ -163,9 +88,9 @@
   <footer>
     <p>© 2025 - guillermohzc.github.io</p>
     <div class="social-icons">
-      <a href="https://github.com/guillermohzc" target="_blank"><i class="fab fa-github"></i></a>
-      <a href="https://www.linkedin.com/in/guillermohzcz" target="_blank"><i class="fab fa-linkedin"></i></a>
-      <a href="https://www.facebook.com" target="_blank"><i class="fab fa-facebook"></i></a>
+      <a href="https://github.com/guillermohzc" target="_blank" aria-label="GitHub"><i class="fab fa-github"></i></a>
+      <a href="https://www.linkedin.com/in/guillermohzcz" target="_blank" aria-label="LinkedIn"><i class="fab fa-linkedin"></i></a>
+      <a href="https://www.facebook.com" target="_blank" aria-label="Facebook"><i class="fab fa-facebook"></i></a>
     </div>
   </footer>
 </body>
