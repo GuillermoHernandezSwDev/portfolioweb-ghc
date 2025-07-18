@@ -37,6 +37,31 @@
       cursor: pointer;
       margin-right: 1rem;
     }
+    .header-left {
+      display: flex;
+      flex-direction: column;
+    }
+    .header-left h1 {
+      font-size: 1.8rem;
+    }
+    .header-left small {
+      font-size: 0.9rem;
+      color: #cccccc;
+    }
+    .cv-icon {
+      color: white;
+      font-size: 1.5rem;
+      margin-left: auto;
+      padding: 0.5rem;
+      border-radius: 6px;
+      transition: background 0.3s;
+    }
+    .cv-icon:hover {
+      background: #333;
+    }
+    .cv-icon[title] {
+      position: relative;
+    }
     nav a {
       color: #fff;
       text-decoration: none;
@@ -73,6 +98,16 @@
       position: relative;
       z-index: 1;
     }
+    .section-label {
+      position: absolute;
+      top: -2.5rem;
+      background: #000;
+      color: white;
+      padding: 0.5rem 1.5rem;
+      border-radius: 8px;
+      font-weight: 600;
+      box-shadow: 3px 3px 10px rgba(0,0,0,0.4);
+    }
     .intro {
       flex-direction: row;
       text-align: left;
@@ -83,13 +118,12 @@
       position: relative;
     }
     .welcome {
-      font-size: 2.5rem;
+      font-size: 3rem;
       font-weight: 700;
       position: absolute;
-      top: -2.5rem;
-      left: 0;
-      right: 0;
-      text-align: center;
+      top: -4rem;
+      right: -1rem;
+      text-align: right;
       animation: typing 2s steps(18), blink 0.5s step-end infinite alternate;
       white-space: nowrap;
       overflow: hidden;
@@ -124,23 +158,6 @@
       width: 100%;
       border-radius: 8px;
     }
-    footer {
-      background: #1a1a1a;
-      color: white;
-      text-align: center;
-      padding: 1rem;
-      font-size: 0.85rem;
-    }
-    .social-icons a {
-      color: white;
-      margin: 0 0.5rem;
-      font-size: 1.2rem;
-    }
-    .about-contact {
-      display: flex;
-      flex-direction: column;
-      gap: 2rem;
-    }
     .contact-form input {
       display: block;
       width: 100%;
@@ -154,42 +171,48 @@
       padding: 1rem;
       border-radius: 12px;
       box-shadow: 5px 5px 15px rgba(0,0,0,0.1);
-      margin-top: 1rem;
+      margin-top: 3rem;
+      width: 100%;
+      max-width: 900px;
+      position: relative;
     }
-    h1 {
-      font-size: 1.8rem;
-      display: flex;
-      align-items: center;
-      gap: 1rem;
+    .contact-form .section-label {
+      top: -2rem;
     }
-    .cv-icon {
-      display: inline-block;
-      background: #007BFF;
+    .social-buttons a {
+      background: #1a1a1a;
       color: white;
-      padding: 0.4rem;
-      border-radius: 4px;
-      font-size: 0.9rem;
+      margin: 0.3rem;
+      padding: 0.5rem 0.75rem;
+      border-radius: 6px;
       text-decoration: none;
+      font-size: 1rem;
+      display: inline-block;
     }
-    .cv-icon:hover {
-      background: #0056b3;
+    footer {
+      background: #1a1a1a;
+      color: white;
+      text-align: center;
+      padding: 1rem;
+      font-size: 0.85rem;
     }
-    .section-title {
-      font-size: 2rem;
-      font-weight: bold;
-      margin-bottom: 2rem;
+    .social-icons a {
+      color: white;
+      margin: 0 0.5rem;
+      font-size: 1.2rem;
     }
   </style>
 </head>
 <body>
   <header>
-    <div style="display: flex; align-items: center;">
-      <div class="menu-toggle">☰</div>
-      <h1>
-        Guillermo Hernández
-        <a class="cv-icon" href="docs/CV-GuillermoHernandez_SwDevML.pdf" target="_blank"><i class="fas fa-file-alt"></i></a>
-        <br><small>Machine Learning Engineer</small>
-      </h1>
+    <div style="display: flex; align-items: center; width: 100%; justify-content: space-between;">
+      <div class="header-left">
+        <h1>Guillermo Hernández</h1>
+        <small>Machine Learning Engineer</small>
+      </div>
+      <a class="cv-icon" href="docs/CV-GuillermoHernandez_SwDevML.pdf" target="_blank" title="Curriculum Vitae">
+        <i class="fas fa-book"></i>
+      </a>
     </div>
     <nav>
       <a href="#projects">My Work</a>
@@ -210,7 +233,7 @@
   </section>
 
   <section id="projects">
-    <h2 class="section-title">My Work</h2>
+    <div class="section-label">My Work</div>
     <div class="section-box">
       <div class="projects-grid">
         <div class="project">
@@ -236,28 +259,30 @@
   </section>
 
   <section id="about">
-    <div class="section-box about-contact">
-      <div>
-        <h2>About Me</h2>
-        <p>I am Guillermo Hernández Cruz, currently in the final stage of my Software and Network Design Engineering degree at Universidad del Valle de México. With a strong foundation in software development, networks, and data management, I am developing a career path focused on machine learning and intelligent systems engineering. I approach my work with dedication, a structured mindset, and clear goals.</p>
-        <p><strong>Location:</strong> Álvaro Obregón, Ciudad de México</p>
-        <p><strong>Education:</strong> Universidad del Valle de México — Ingeniería en Diseño de Software y Redes</p>
-        <p><strong>Specialization:</strong> Machine Learning & Intelligent Systems</p>
+    <div class="section-label">About Me</div>
+    <div class="section-box">
+      <h2>About Me</h2>
+      <p>I am Guillermo Hernández Cruz, currently in the final stage of my Software and Network Design Engineering degree at Universidad del Valle de México. With a strong foundation in software development, networks, and data management, I am developing a career path focused on machine learning and intelligent systems engineering. I approach my work with dedication, a structured mindset, and clear goals.</p>
+      <p>Álvaro Obregón, Ciudad de México</p>
+      <p>Universidad del Valle de México</p>
+      <p>Machine Learning & Intelligent Systems</p>
+      <div class="social-buttons">
+        <a href="https://www.linkedin.com/in/guillermohzcz" target="_blank"><i class="fab fa-linkedin"></i></a>
+        <a href="https://github.com/guillermohzc" target="_blank"><i class="fab fa-github"></i></a>
+        <a href="https://www.facebook.com" target="_blank"><i class="fab fa-facebook"></i></a>
       </div>
-      <div class="contact-form">
-        <h3>Contact Form</h3>
-        <form>
-          <input type="text" placeholder="Name" required>
-          <input type="text" placeholder="Company">
-          <input type="tel" placeholder="Phone">
-          <input type="email" placeholder="Email" required>
-          <input type="submit" value="Submit">
-        </form>
-        <div class="contact-links" style="margin-top: 1rem;">
-          <a href="mailto:guillermo.hzcz97@outlook.com">Email</a>
-          <a href="https://www.linkedin.com/in/guillermohzcz" target="_blank">LinkedIn</a>
-        </div>
-      </div>
+    </div>
+
+    <div class="contact-form">
+      <div class="section-label">Contact Form</div>
+      <h3>Contact Me</h3>
+      <form>
+        <input type="text" placeholder="Name" required>
+        <input type="text" placeholder="Company">
+        <input type="tel" placeholder="Phone">
+        <input type="email" placeholder="Email" required>
+        <input type="submit" value="Submit">
+      </form>
     </div>
   </section>
 
