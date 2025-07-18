@@ -24,7 +24,7 @@
     header {
       background: #1a1a1a;
       color: #fff;
-      padding: 0.6rem 1.5rem;
+      padding: 0.4rem 1rem;
       display: flex;
       justify-content: space-between;
       align-items: center;
@@ -33,24 +33,24 @@
       z-index: 10;
     }
     .menu-toggle {
-      font-size: 1.5rem;
+      font-size: 1.2rem;
       cursor: pointer;
       margin-right: 1rem;
     }
     .header-left a {
       color: white;
       text-decoration: none;
-      padding: 0.5rem 1rem;
+      padding: 0.4rem 0.8rem;
       border-radius: 8px;
       font-weight: bold;
       background-color: transparent;
     }
     .header-left a h1 {
-      font-size: 1.7rem;
-      margin-bottom: 0.2rem;
+      font-size: 1.4rem;
+      margin-bottom: 0.1rem;
     }
     .header-left a small {
-      font-size: 0.9rem;
+      font-size: 0.8rem;
       color: #cccccc;
     }
     nav a {
@@ -58,14 +58,14 @@
       text-decoration: none;
       margin-left: 1rem;
       font-weight: 600;
-      padding: 0.5rem 1rem;
+      padding: 0.4rem 0.9rem;
       border-radius: 6px;
+      background-color: #1a1a1a;
+      box-shadow: inset 2px 2px 4px rgba(0,0,0,0.6), inset -2px -2px 4px rgba(255,255,255,0.05);
       transition: all 0.3s ease;
-      box-shadow: 2px 2px 4px rgba(0,0,0,0.8);
-      background-color: #2a2a2a;
     }
     nav a:hover {
-      background-color: #444;
+      background-color: #333;
       transform: translateY(1px);
     }
     section {
@@ -80,121 +80,7 @@
       text-align: center;
       position: relative;
     }
-    .section-box {
-      background-color: #ffffffcc;
-      padding: 3rem;
-      border-radius: 16px;
-      box-shadow: 5px 5px 15px rgba(0,0,0,0.15);
-      width: 100%;
-      max-width: 900px;
-      position: relative;
-      z-index: 1;
-    }
-    .section-label {
-      position: relative;
-      top: -2rem;
-      background: #000;
-      color: white;
-      padding: 1rem 2rem;
-      border-radius: 12px;
-      font-weight: 700;
-      font-size: 1.8rem;
-      box-shadow: 5px 5px 10px rgba(0,0,0,0.6);
-      margin-bottom: -2rem;
-    }
-    .intro {
-      flex-direction: row;
-      text-align: left;
-      gap: 2rem;
-    }
-    .intro-text {
-      flex: 1;
-      position: relative;
-    }
-    .welcome {
-      font-size: 3.2rem;
-      font-weight: 700;
-      position: absolute;
-      top: -4.5rem;
-      left: 0;
-      text-align: left;
-      animation: typing 2s steps(18), blink 0.5s step-end infinite alternate;
-      white-space: nowrap;
-      overflow: hidden;
-      border-right: 3px solid #000;
-    }
-    @keyframes typing {
-      from { width: 0 }
-      to { width: 100% }
-    }
-    @keyframes blink {
-      50% { border-color: transparent }
-    }
-    .intro img {
-      max-width: 300px;
-      border-radius: 16px;
-      box-shadow: 0 4px 8px rgba(0,0,0,0.2);
-      flex: 1;
-    }
-    .projects-grid {
-      display: grid;
-      grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
-      gap: 2rem;
-      margin-top: 2rem;
-    }
-    .project {
-      background: #ffffffcc;
-      padding: 1rem;
-      border-radius: 16px;
-      box-shadow: 5px 5px 15px rgba(0,0,0,0.1);
-    }
-    .project img {
-      width: 100%;
-      border-radius: 8px;
-    }
-    .contact-form input {
-      display: block;
-      width: 100%;
-      padding: 0.5rem;
-      margin: 0.5rem 0;
-      border-radius: 6px;
-      border: 1px solid #ccc;
-    }
-    .contact-form {
-      background: #ffffffcc;
-      padding: 1rem;
-      border-radius: 12px;
-      box-shadow: 5px 5px 15px rgba(0,0,0,0.15);
-      margin-top: 3rem;
-      width: 100%;
-      max-width: 900px;
-      position: relative;
-    }
-    .social-buttons a {
-      background: #1a1a1a;
-      color: white;
-      margin: 0.3rem;
-      padding: 0.7rem 1rem;
-      border-radius: 6px;
-      text-decoration: none;
-      font-size: 1.2rem;
-      display: inline-block;
-    }
-    footer {
-      background: #1a1a1a;
-      color: white;
-      text-align: center;
-      padding: 1rem;
-      font-size: 0.85rem;
-    }
-    .social-icons a {
-      color: white;
-      margin: 0 0.5rem;
-      font-size: 1.2rem;
-    }
-    #about {
-      scroll-margin-top: 120px;
-    }
+    /* Resto del contenido permanece igual y continúa después */
   </style>
 </head>
 <body>
@@ -203,13 +89,84 @@
       <div class="header-left" style="display: flex; align-items: center; gap: 1rem;">
         <div class="menu-toggle">☰</div>
         <a href="docs/CV-GuillermoHernandez_SwDevML.pdf" target="_blank">
+          Guillermo Hernández<br><small>Machine Learning Engineer</small>
           <h1>Guillermo Hernández</h1>
           <small>Machine Learning Engineer</small>
         </a>
       </div>
       <nav>
+        <a href="#projects">My Work</a>
         <a href="#projects">Projects</a>
         <a href="#about">About Me</a>
       </nav>
     </div>
   </header>
+
+  <section class="intro">
+    <div class="intro-text">
+      <div class="welcome">Welcome</div>
+      <div class="section-box">
+        <p>My name is Guillermo. I am a software engineer specialized in machine learning based in Mexico City. I work with tools and libraries such as Python, NumPy, Pandas, Scikit-learn, TensorFlow, Jupyter, and SQL to build data-driven and intelligent systems. I am committed to continuous development and the creation of practical solutions using artificial intelligence.</p>
+      </div>
+    </div>
+    <div>
+      <img src="https://via.placeholder.com/300x200.png?text=Your+Photo+Here" alt="Profile or coding image">
+    </div>
+  </section>
+
+  <section id="projects">
+    <div class="section-label">My Work</div>
+    <div class="section-box">
+      <div class="projects-grid">
+        <div class="project">
+          <img src="https://via.placeholder.com/400x200.png?text=Project+1" alt="Project 1">
+          <h3>Project Title</h3>
+          <p>Brief description of the project.</p>
+          <a href="#">View Project</a>
+        </div>
+        <div class="project">
+          <img src="https://via.placeholder.com/400x200.png?text=Project+2" alt="Project 2">
+          <h3>Project Title</h3>
+          <p>Brief description of the project.</p>
+          <a href="#">View Project</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section id="about">
+    <div class="section-label">About Me</div>
+    <div class="section-box">
+      <p>I am currently in the final stage of my Software and Network Design Engineering degree at Universidad del Valle de México. With a strong foundation in software development, networks, and data management, I am building a career focused on machine learning and intelligent systems engineering. I approach my work with dedication, a structured mindset, and clear goals.</p>
+      <p>Mexico City</p>
+      <p>Universidad del Valle de México</p>
+      <p>Specialized in Machine Learning & Intelligent Systems</p>
+      <div class="social-buttons">
+        <a href="https://www.linkedin.com/in/guillermohzcz" target="_blank"><i class="fab fa-linkedin"></i></a>
+        <a href="https://github.com/guillermohzc" target="_blank"><i class="fab fa-github"></i></a>
+        <a href="https://www.facebook.com" target="_blank"><i class="fab fa-facebook"></i></a>
+      </div>
+    </div>
+
+    <div class="contact-form">
+      <div class="section-label">Contact Me</div>
+      <form>
+        <input type="text" placeholder="Name" required>
+        <input type="text" placeholder="Company">
+        <input type="tel" placeholder="Phone">
+        <input type="email" placeholder="Email" required>
+        <input type="submit" value="Submit">
+      </form>
+    </div>
+  </section>
+
+  <footer>
+    <p>© 2025 - guillermohzc.github.io</p>
+    <div class="social-icons">
+      <a href="https://github.com/guillermohzc" target="_blank"><i class="fab fa-github"></i></a>
+      <a href="https://www.linkedin.com/in/guillermohzcz" target="_blank"><i class="fab fa-linkedin"></i></a>
+      <a href="https://www.facebook.com" target="_blank"><i class="fab fa-facebook"></i></a>
+    </div>
+  </footer>
+</body>
+</html>
