@@ -1,96 +1,270 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <title>Guillermo Hernández - Machine Learning Engineer</title>
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <!-- Hoja de estilos personalizada -->
-  <link rel="stylesheet" href="styles.css">
-  <!-- Font Awesome para íconos sociales -->
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
-</head>
-<body>
-  
-<header>
-  <div class="header-left">
-    <div class="menu-toggle">☰</div>
-    <a href="docs/CV-GuillermoHernandez_SwDevML.pdf" target="_blank" class="cv-button">
-      <span class="name">Guillermo Hernández</span>
-      <span class="specialty">Machine Learning Engineer</span>
-    </a>
-  </div>
-  <nav class="header-buttons">
-    <a href="#projects">Projects</a>
-    <a href="#about">About me</a>
-  </nav>
-</header>
+body {
+  font-family: Arial, sans-serif;
+  margin: 0;
+  background: #f5f5f5;
+}
 
+/* HEADER: minimalista, barra completa, botones 3D incrustados */
+header {
+  width: 100vw;
+  background: #1a1a1a;
+  color: #fff;
+  position: sticky;
+  top: 0;
+  z-index: 999;
+  padding: 0;
+}
 
-  <section class="intro">
-    <div class="intro-text">
-      <div class="welcome">Welcome</div>
-      <div class="section-box">
-        <p>My name is Guillermo. I am a software engineer specialized in machine learning based in Mexico City. I work with tools and libraries such as Python, NumPy, Pandas, Scikit-learn, TensorFlow, Jupyter, and SQL to build data-driven and intelligent systems. I am committed to continuous development and the creation of practical solutions using artificial intelligence.</p>
-      </div>
-    </div>
-    <div>
-      <img src="https://via.placeholder.com/300x200.png?text=Your+Photo+Here" alt="Profile or coding image">
-    </div>
-  </section>
+.main-header-nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  max-width: 1200px;
+  margin: 0 auto;
+  height: 72px;
+  padding: 0 36px;
+}
 
-  <section id="projects">
-    <div class="section-label">My Work</div>
-    <div class="section-box">
-      <div class="projects-grid">
-        <div class="project">
-          <img src="https://via.placeholder.com/400x200.png?text=Project+1" alt="Project 1">
-          <h3>Project Title</h3>
-          <p>Brief description of the project.</p>
-          <a href="#">View Project</a>
-        </div>
-        <div class="project">
-          <img src="https://via.placeholder.com/400x200.png?text=Project+2" alt="Project 2">
-          <h3>Project Title</h3>
-          <p>Brief description of the project.</p>
-          <a href="#">View Project</a>
-        </div>
-      </div>
-    </div>
-  </section>
+.header-left {
+  display: flex;
+  align-items: center;
+}
 
-  <section id="about">
-    <div class="section-label">About Me</div>
-    <div class="section-box">
-      <p>I am currently in the final stage of my Software and Network Design Engineering degree at Universidad del Valle de México. With a strong foundation in software development, networks, and data management, I am building a career focused on machine learning and intelligent systems engineering. I approach my work with dedication, a structured mindset, and clear goals.</p>
-      <p>Mexico City</p>
-      <p>Universidad del Valle de México</p>
-      <p>Specialized in Machine Learning & Intelligent Systems</p>
-      <div class="social-buttons">
-        <a href="https://www.linkedin.com/in/guillermohzcz" target="_blank" aria-label="LinkedIn"><i class="fab fa-linkedin"></i></a>
-        <a href="https://github.com/guillermohzc" target="_blank" aria-label="GitHub"><i class="fab fa-github"></i></a>
-        <a href="https://www.facebook.com" target="_blank" aria-label="Facebook"><i class="fab fa-facebook"></i></a>
-      </div>
-    </div>
+.menu-btn {
+  width: 44px;
+  height: 44px;
+  border: none;
+  background: #232323;
+  color: #fff;
+  font-size: 1.6em;
+  border-radius: 12px;
+  margin-right: 16px;
+  box-shadow: 
+    inset 2px 2px 6px #111, 
+    inset -2px -2px 6px #333;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  transition: box-shadow 0.2s, background 0.2s;
+}
+.menu-btn:hover {
+  background: #333;
+  box-shadow: 
+    0 2px 8px #1113, 
+    inset 2px 2px 6px #101, 
+    inset -2px -2px 6px #444;
+}
 
-    <div class="contact-form">
-      <div class="section-label">Contact Me</div>
-      <form>
-        <input type="text" placeholder="Name" required>
-        <input type="text" placeholder="Company">
-        <input type="tel" placeholder="Phone">
-        <input type="email" placeholder="Email" required>
-        <input type="submit" value="Submit">
-      </form>
-    </div>
-  </section>
+.cv-btn {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  background: #232323;
+  border-radius: 12px;
+  padding: 9px 24px;
+  text-decoration: none;
+  margin-right: 24px;
+  box-shadow: 
+    inset 2px 2px 6px #111, 
+    inset -2px -2px 6px #333;
+  transition: box-shadow 0.2s, background 0.2s;
+  position: relative;
+}
+.cv-btn:hover {
+  background: #292929;
+  box-shadow: 0 2px 8px #0002;
+}
+.cv-name {
+  font-size: 1.18em;
+  color: #fff;
+  font-weight: 600;
+  line-height: 1.1;
+}
+.cv-role {
+  font-size: 0.89em;
+  color: #bbb;
+  font-weight: 400;
+  line-height: 1;
+  margin-top: 2px;
+  letter-spacing: 0.01em;
+}
 
-  <footer>
-    <p>© 2025 - guillermohzc.github.io</p>
-    <div class="social-icons">
-      <a href="https://github.com/guillermohzc" target="_blank" aria-label="GitHub"><i class="fab fa-github"></i></a>
-      <a href="https://www.linkedin.com/in/guillermohzcz" target="_blank" aria-label="LinkedIn"><i class="fab fa-linkedin"></i></a>
-      <a href="https://www.facebook.com" target="_blank" aria-label="Facebook"><i class="fab fa-facebook"></i></a>
-    </div>
-  </footer>
-</body>
-</html>
+.header-right {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.header-btn {
+  padding: 0.7em 1.7em;
+  background: #232323;
+  color: #fff;
+  border-radius: 12px;
+  font-weight: bold;
+  text-decoration: none;
+  font-size: 1em;
+  margin-left: 8px;
+  box-shadow: 
+    inset 2px 2px 6px #111, 
+    inset -2px -2px 6px #333;
+  transition: box-shadow 0.2s, background 0.2s, transform 0.15s;
+}
+.header-btn:hover {
+  background: #333;
+  transform: translateY(1px);
+  box-shadow: 0 2px 8px #0002;
+}
+
+/* Fin header */
+
+section {
+  padding: 2em 1em;
+  max-width: 900px;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  text-align: center;
+}
+
+.intro {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 2em;
+  align-items: center;
+}
+
+.intro img {
+  border-radius: 8px;
+  max-width: 300px;
+}
+
+.intro-text {
+  flex: 1;
+}
+
+.welcome {
+  font-size: 1.5em;
+  font-weight: bold;
+  margin-bottom: .5em;
+}
+
+.section-label {
+  font-weight: bold;
+  font-size: 1.2em;
+  margin-bottom: .5em;
+}
+
+.section-box {
+  background-color: #ffffffcc;
+  padding: 2em;
+  border-radius: 16px;
+  box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+  max-width: 800px;
+  width: 100%;
+  position: relative;
+  z-index: 1;
+  margin-top: 2em;
+  margin-bottom: 1em;
+}
+
+.projects-grid {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 2em;
+}
+
+.project {
+  background: #fafafa;
+  border-radius: 8px;
+  box-shadow: 0 2px 8px #0001;
+  padding: 1em;
+  flex: 1 1 260px;
+  max-width: 350px;
+}
+
+.project img {
+  border-radius: 4px;
+  width: 100%;
+}
+
+.social-buttons a,
+.social-icons a {
+  color: #222;
+  margin-right: .8em;
+  font-size: 1.5em;
+  transition: color 0.2s;
+}
+
+.social-buttons a:hover,
+.social-icons a:hover {
+  color: #0a66c2;
+}
+
+.contact-form {
+  background: #fff;
+  border-radius: 8px;
+  padding: 1.5em;
+  margin-top: 1em;
+}
+
+.contact-form input[type="text"],
+.contact-form input[type="tel"],
+.contact-form input[type="email"] {
+  width: 100%;
+  padding: .7em;
+  margin-bottom: 1em;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  font-size: 1em;
+}
+
+.contact-form input[type="submit"] {
+  background: #0a66c2;
+  color: #fff;
+  border: none;
+  padding: .8em 2em;
+  border-radius: 4px;
+  cursor: pointer;
+  font-size: 1em;
+}
+
+.contact-form input[type="submit"]:hover {
+  background: #084a92;
+}
+
+footer {
+  background: #222;
+  color: #fff;
+  padding: 1em 0;
+  text-align: center;
+}
+
+.social-icons {
+  margin-top: .5em;
+}
+
+@media (max-width: 700px) {
+  .intro {
+    flex-direction: column;
+  }
+  .projects-grid {
+    flex-direction: column;
+  }
+  .main-header-nav {
+    flex-direction: column;
+    height: auto;
+    padding: 0 10px;
+  }
+  .header-left, .header-right {
+    flex-direction: row;
+    gap: 4px;
+  }
+  .cv-btn, .header-btn {
+    padding: 7px 12px;
+    font-size: 0.96rem;
+  }
+}
