@@ -130,3 +130,34 @@ footer {
   color: white;
   font-size: 0.9em;
 }
+
+.header-left {
+  display: flex;
+  align-items: center;
+  gap: 1em;
+}
+
+.cv-button {
+  text-decoration: none;
+  color: white;
+  display: flex;
+  flex-direction: column;
+  line-height: 1.2;
+  padding: 0.2em 0.8em;
+  border-radius: 8px;
+  transition: background-color 0.3s;
+}
+
+.cv-button:hover {
+  background-color: #333;
+}
+
+.cv-button .name {
+  font-size: 1.2em;
+  font-weight: bold;
+}
+
+.cv-button .specialty {
+  font-size: 0.85em;
+  color: #cccccc;
+}
