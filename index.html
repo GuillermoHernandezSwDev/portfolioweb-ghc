@@ -4,7 +4,6 @@
   <meta charset="UTF-8">
   <title>Guillermo Hernández - Machine Learning Engineer</title>
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <!-- Hoja de estilos personalizada -->
   <link rel="stylesheet" href="styles.css">
   <!-- Font Awesome para íconos sociales -->
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
@@ -13,7 +12,6 @@
   
 <header>
   <nav class="main-header-nav">
-    <!-- IZQUIERDA: menú + nombre/rol -->
     <div class="header-left">
       <button class="menu-btn" aria-label="Menu">
         <svg width="28" height="28" viewBox="0 0 28 28">
@@ -30,7 +28,6 @@
         <span class="cv-role">Machine Learning Engineer</span>
       </a>
     </div>
-    <!-- DERECHA: Projects/About -->
     <div class="header-right">
       <a class="header-btn" href="#projects">Projects</a>
       <a class="header-btn" href="#about">About me</a>
@@ -38,9 +35,9 @@
   </nav>
 </header>
 
-<section class="intro-section">
-  <div class="welcome-animated" id="welcome-animated">Welcome</div>
+<section class="intro-section" id="intro">
   <div class="intro-window">
+    <div class="welcome-typewriter" id="welcome-typewriter"></div>
     <div class="intro-content">
       <div class="intro-text">
         <p>My name is Guillermo. I am a software engineer specialized in machine learning based in Mexico City. I work with tools and libraries such as Python, NumPy, Pandas, Scikit-learn, TensorFlow, Jupyter, and SQL to build data-driven and intelligent systems. I am committed to continuous development and the creation of practical solutions using artificial intelligence.</p>
@@ -107,16 +104,50 @@
   </div>
 </footer>
 <script>
-function animateWelcome() {
-  const welcome = document.getElementById('welcome-animated');
-  if(!welcome) return;
-  welcome.classList.remove('active');
-  // Force reflow for restart animation
-  void welcome.offsetWidth;
-  welcome.classList.add('active');
+const typeText = "Welcome";
+let typeInterval = null;
+let blinkInterval = null;
+
+function typeWriterEffect(element, text, speed=85) {
+  element.textContent = "";
+  let i = 0;
+
+  function typeChar() {
+    if (i <= text.length) {
+      element.innerHTML = `<span>${text.substring(0, i)}</span><span class="type-cursor">\u2588</span>`;
+      i++;
+      typeInterval = setTimeout(typeChar, speed);
+    } else {
+      blinkCursor(element, text);
+    }
+  }
+  typeChar();
 }
-animateWelcome();
-setInterval(animateWelcome, 30000);
+
+function blinkCursor(el, text) {
+  let visible = true;
+  if (blinkInterval) clearInterval(blinkInterval);
+  blinkInterval = setInterval(() => {
+    if (visible) {
+      el.innerHTML = `<span>${text}</span><span class="type-cursor" style="opacity:0">\u2588</span>`;
+    } else {
+      el.innerHTML = `<span>${text}</span><span class="type-cursor">\u2588</span>`;
+    }
+    visible = !visible;
+  }, 520);
+}
+
+function animateWelcome() {
+  const el = document.getElementById('welcome-typewriter');
+  if (!el) return;
+  if (typeInterval) clearTimeout(typeInterval);
+  if (blinkInterval) clearInterval(blinkInterval);
+  typeWriterEffect(el, typeText);
+}
+document.addEventListener("DOMContentLoaded", function() {
+  animateWelcome();
+  setInterval(animateWelcome, 30000);
+});
 </script>
 </body>
 </html>
