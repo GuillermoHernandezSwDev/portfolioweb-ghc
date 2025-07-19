@@ -93,5 +93,84 @@
       <div class="social-buttons">
         <a href="https://www.linkedin.com/in/guillermohzcz" target="_blank" aria-label="LinkedIn"><i class="fab fa-linkedin"></i></a>
         <a href="https://github.com/guillermohzc" target="_blank" aria-label="GitHub"><i class="fab fa-github"></i></a>
-        <a href="https://www.facebook.com" target="_blank" aria
-
+        <a href="https://www.facebook.com" target="_blank" aria-label="Facebook"><i class="fab fa-facebook"></i></a>
+      </div>
+    </div>
+  </div>
+  <div class="contact-form-box">
+    <div class="contact-form-title">Contact Me</div>
+    <form class="contact-form">
+      <input type="text" placeholder="Name" required>
+      <input type="text" placeholder="Company">
+      <input type="tel" placeholder="Phone">
+      <input type="email" placeholder="Email" required>
+      <input type="submit" value="Submit">
+    </form>
+  </div>
+</section>
+
+<footer>
+  <p>© 2025 - guillermohzc.github.io</p>
+</footer>
+
+<script>
+const typeText = "Welcome";
+let typeInterval = null;
+let blinkInterval = null;
+
+function typeWriterEffect(element, text, speed=90) {
+  element.textContent = "";
+  let i = 0;
+  function typeChar() {
+    if (i <= text.length) {
+      element.innerHTML = `<span>${text.substring(0, i)}</span><span class="type-cursor">\u2588</span>`;
+      i++;
+      typeInterval = setTimeout(typeChar, speed);
+    } else {
+      blinkCursor(element, text);
+    }
+  }
+  typeChar();
+}
+
+function blinkCursor(el, text) {
+  let visible = true;
+  if (blinkInterval) clearInterval(blinkInterval);
+  blinkInterval = setInterval(() => {
+    if (visible) {
+      el.innerHTML = `<span>${text}</span><span class="type-cursor" style="opacity:0">\u2588</span>`;
+    } else {
+      el.innerHTML = `<span>${text}</span><span class="type-cursor">\u2588</span>`;
+    }
+    visible = !visible;
+  }, 520);
+}
+
+function animateWelcome() {
+  const el = document.getElementById('welcome-typewriter');
+  if (!el) return;
+  if (typeInterval) clearTimeout(typeInterval);
+  if (blinkInterval) clearInterval(blinkInterval);
+  typeWriterEffect(el, typeText);
+}
+document.addEventListener("DOMContentLoaded", function() {
+  animateWelcome();
+  setInterval(animateWelcome, 30000);
+});
+
+// SCROLL ANCHOR: centers the About Me box correctly
+document.querySelectorAll('a.header-btn[href="#about"]').forEach(btn => {
+  btn.addEventListener('click', function(e) {
+    e.preventDefault();
+    const aboutSection = document.getElementById('about');
+    if (aboutSection) {
+      aboutSection.scrollIntoView({
+        behavior: "smooth",
+        block: "center"
+      });
+    }
+  });
+});
+</script>
+</body>
+</html>
