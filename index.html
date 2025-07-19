@@ -5,7 +5,7 @@
   <title>Guillermo Hernández - Machine Learning Engineer</title>
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <link rel="stylesheet" href="styles.css">
-  <!-- Font Awesome para íconos sociales -->
+  <!-- Font Awesome for social icons -->
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
 </head>
 <body>
@@ -30,7 +30,7 @@
     </div>
     <div class="header-right">
       <a class="header-btn" href="#projects">Projects</a>
-      <a class="header-btn" href="#about">About me</a>
+      <a class="header-btn" href="#about">About Me</a>
     </div>
   </nav>
 </header>
@@ -41,7 +41,9 @@
     <div class="welcome-typewriter-outside" id="welcome-typewriter"></div>
     <div class="intro-content">
       <div class="intro-text">
-        <p>My name is Guillermo. I am a software engineer specialized in machine learning based in Mexico City. I work with tools and libraries such as Python, NumPy, Pandas, Scikit-learn, TensorFlow, Jupyter, and SQL to build data-driven and intelligent systems. I am committed to continuous development and the creation of practical solutions using artificial intelligence.</p>
+        <p>
+          My name is Guillermo. I am a software engineer specialized in machine learning, based in Mexico City. I work with tools and libraries such as Python, NumPy, Pandas, Scikit-learn, TensorFlow, and more.
+        </p>
       </div>
       <div class="intro-img">
         <img src="https://via.placeholder.com/300x300.png?text=Your+Photo+Here" alt="Profile or coding image">
@@ -82,95 +84,14 @@
   <div class="section-window info-window about-info-window">
     <div class="section-title-3d small-title">About Me</div>
     <div class="about-box">
-      <p>I am currently in the final stage of my Software and Network Design Engineering degree at Universidad del Valle de México. With a strong foundation in software development, networks, and data management, I am building a career focused on machine learning and intelligent systems engineering. I approach my work with dedication, a structured mindset, and clear goals.</p>
+      <p>
+        I am currently in the final stage of my Software and Network Design Engineering degree at Universidad del Valle de México. With a strong foundation in software development, networks, and data analysis, I am passionate about creating intelligent systems and impactful solutions.
+      </p>
       <p>Mexico City</p>
       <p>Universidad del Valle de México</p>
-      <p>Specialized in Machine Learning & Intelligent Systems</p>
+      <p>Specialization: Machine Learning & Intelligent Systems</p>
       <div class="social-buttons">
         <a href="https://www.linkedin.com/in/guillermohzcz" target="_blank" aria-label="LinkedIn"><i class="fab fa-linkedin"></i></a>
         <a href="https://github.com/guillermohzc" target="_blank" aria-label="GitHub"><i class="fab fa-github"></i></a>
-        <a href="https://www.facebook.com" target="_blank" aria-label="Facebook"><i class="fab fa-facebook"></i></a>
-      </div>
-    </div>
-  </div>
-  <div class="contact-form-box">
-    <div class="contact-form-title">Contact Me</div>
-    <form class="contact-form">
-      <input type="text" placeholder="Name" required>
-      <input type="text" placeholder="Company">
-      <input type="tel" placeholder="Phone">
-      <input type="email" placeholder="Email" required>
-      <input type="submit" value="Submit">
-    </form>
-  </div>
-</section>
-
-<footer>
-  <p>© 2025 - guillermohzc.github.io</p>
-  <div class="social-icons">
-    <a href="https://github.com/guillermohzc" target="_blank" aria-label="GitHub"><i class="fab fa-github"></i></a>
-    <a href="https://www.linkedin.com/in/guillermohzcz" target="_blank" aria-label="LinkedIn"><i class="fab fa-linkedin"></i></a>
-    <a href="https://www.facebook.com" target="_blank" aria-label="Facebook"><i class="fab fa-facebook"></i></a>
-  </div>
-</footer>
-<script>
-const typeText = "Welcome";
-let typeInterval = null;
-let blinkInterval = null;
-
-function typeWriterEffect(element, text, speed=90) {
-  element.textContent = "";
-  let i = 0;
-  function typeChar() {
-    if (i <= text.length) {
-      element.innerHTML = `<span>${text.substring(0, i)}</span><span class="type-cursor">\u2588</span>`;
-      i++;
-      typeInterval = setTimeout(typeChar, speed);
-    } else {
-      blinkCursor(element, text);
-    }
-  }
-  typeChar();
-}
-
-function blinkCursor(el, text) {
-  let visible = true;
-  if (blinkInterval) clearInterval(blinkInterval);
-  blinkInterval = setInterval(() => {
-    if (visible) {
-      el.innerHTML = `<span>${text}</span><span class="type-cursor" style="opacity:0">\u2588</span>`;
-    } else {
-      el.innerHTML = `<span>${text}</span><span class="type-cursor">\u2588</span>`;
-    }
-    visible = !visible;
-  }, 520);
-}
-
-function animateWelcome() {
-  const el = document.getElementById('welcome-typewriter');
-  if (!el) return;
-  if (typeInterval) clearTimeout(typeInterval);
-  if (blinkInterval) clearInterval(blinkInterval);
-  typeWriterEffect(el, typeText);
-}
-document.addEventListener("DOMContentLoaded", function() {
-  animateWelcome();
-  setInterval(animateWelcome, 30000);
-});
-
-// SCROLL ANCLA: centra el cuadro de About Me correctamente
-document.querySelectorAll('a.header-btn[href="#about"]').forEach(btn => {
-  btn.addEventListener('click', function(e) {
-    e.preventDefault();
-    const aboutSection = document.getElementById('about');
-    if (aboutSection) {
-      aboutSection.scrollIntoView({
-        behavior: "smooth",
-        block: "center"
-      });
-    }
-  });
-});
-</script>
-</body>
-</html>
+        <a href="https://www.facebook.com" target="_blank" aria
+
