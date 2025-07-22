@@ -4,8 +4,6 @@ body {
   background: #f5f5f5;
 }
 
-/* HEADER AND BUTTONS */
-
 header {
   background: #1a1a1a;
   color: #fff;
@@ -96,7 +94,7 @@ header {
   background: #292929;
 }
 .cv-name {
-  font-size: 1.48em; /* Increased font size for your name */
+  font-size: 1.48em;
   color: #fff;
   font-weight: 700;
   line-height: 1.05;
@@ -147,7 +145,6 @@ header {
     inset -4px -4px 11px #666;
 }
 
-/* MAIN SECTIONS */
 .main-section {
   width: 100vw;
   min-height: 100vh;
@@ -162,29 +159,27 @@ header {
   margin: 0;
 }
 
-/* CENTRAL WINDOW FOR EACH SECTION */
 .section-window {
   background: #fff;
   border-radius: 28px;
   box-shadow: 0 8px 32px 0 rgba(80,80,160,0.08), 0 2px 8px #2222;
-  width: 98vw;
-  max-width: 1280px;
-  min-height: 540px;
+  width: 100%;
+  max-width: 900px;
+  min-width: 0;
   margin: 0 auto;
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: flex-start;
   position: relative;
-  padding: 60px 48px 44px 48px; /* more padding */
+  padding: 40px 24px;
+  box-sizing: border-box;
 }
 
-/* For the intro (Welcome) window, bigger if needed */
 .section-window.welcome-window {
-  min-height: 600px;
+  min-height: 480px;
 }
 
-/* 3D BLACK TITLE FOR WINDOW */
 .section-title-3d {
   width: 92%;
   display: flex;
@@ -220,10 +215,8 @@ header {
   box-shadow: 0 5px 18px #0008, 0 0 0 1.5px #222;
 }
 
-/* Space for floating title */
 .info-window { padding-top: 70px; }
 
-/* WELCOME OUTSIDE THE BOX */
 .welcome-typewriter-outside {
   position: absolute;
   top: -110px;
@@ -259,12 +252,11 @@ header {
   50% { opacity: 0; }
 }
 
-/* INTRO CONTENT */
 .intro-content {
   display: flex;
   flex-direction: row;
   width: 100%;
-  min-height: 370px;
+  min-height: 270px;
   height: 100%;
   padding: 38px 32px 32px 32px;
   gap: 32px;
@@ -301,7 +293,6 @@ header {
   box-shadow: 0 4px 32px #4444;
 }
 
-/* PROJECTS GRID */
 .projects-grid {
   display: flex;
   flex-wrap: wrap;
@@ -340,7 +331,6 @@ header {
   margin-right: auto;
 }
 
-/* ABOUT SECTION */
 .about-box {
   width: 100%;
   max-width: 900px;
@@ -375,27 +365,92 @@ header {
 .social-buttons a:last-child { margin-right: 0; }
 .social-buttons a:hover { color: #0a66c2; transform: scale(1.2); }
 
-/* CONTACT FORM - NEUTRAL/MINIMALIST COLORS */
-.contact-form-box {
-  background: #f7f7f8;
-  border-radius: 24px;
-  box-shadow: 0 8px 32px rgba(40,40,40,0.13), 0 2px 8px #e0e0e0;
-  padding: 36px 22px 30px 22px;
-  margin: 44px 0 32px 0;
+/* CERTIFICATIONS AREA */
+.certifications-area {
+  margin-top: 48px;
+  margin-bottom: 12px;
+  width: 100%;
   display: flex;
   flex-direction: column;
   align-items: center;
-  padding-left: 32px;
-  padding-right: 32px;
+}
+.certifications-title {
+  font-size: 1.5em;
+  font-weight: bold;
+  margin-bottom: 24px;
+  color: #181818;
+  letter-spacing: 0.02em;
+}
+.certifications-list {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 30px;
+  justify-content: center;
+  width: 100%;
+}
+.certification-card {
+  background: #f8f8fa;
+  border-radius: 12px;
+  box-shadow: 0 2px 8px #0001;
+  display: flex;
+  align-items: center;
+  gap: 20px;
+  padding: 22px 30px;
+  min-width: 260px;
+  max-width: 320px;
+  min-height: 100px;
+}
+.certification-card.empty {
+  opacity: 0.7;
+  border: 1.5px dashed #bbb;
+}
+.cert-icon {
+  font-size: 2.1em;
+  color: #0a66c2;
+  flex-shrink: 0;
+}
+.cert-info {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+}
+.cert-title {
+  font-size: 1.17em;
+  font-weight: 600;
+  color: #181818;
+}
+.cert-desc {
+  color: #666;
+  font-size: 0.99em;
+}
+
+/* CONTACT FORM - WIDE HORIZONTAL RECTANGLE */
+.contact-form-box.horizontal {
+  background: #f7f7f8;
+  border-radius: 18px;
+  box-shadow: 0 8px 32px rgba(40,40,40,0.13), 0 2px 8px #e0e0e0;
+  padding: 40px 48px 36px 48px;
+  margin: 44px auto 32px auto;
+  display: flex;
+  flex-direction: row;
+  align-items: flex-start;
+  justify-content: center;
+  width: 100%;
+  max-width: 780px;
+  min-width: 0;
+  min-height: 240px;
 }
 
 .contact-form-title {
   color: #222;
   font-size: 2em;
   font-weight: 700;
-  margin-bottom: 16px;
+  margin-bottom: 0;
+  margin-right: 60px;
   text-shadow: 0 2px 8px #e0e0e0;
-  text-align: center;
+  text-align: left;
+  align-self: flex-start;
+  min-width: 180px;
 }
 
 .contact-form {
@@ -406,8 +461,9 @@ header {
   display: flex;
   flex-direction: column;
   align-items: center;
-  width: 90%;
-  max-width: 420px;
+  width: 310px;
+  min-width: 0;
+  max-width: 370px;
 }
 
 .contact-form input[type="text"],
@@ -442,8 +498,9 @@ header {
   scroll-margin-top: 120px;
 }
 
-@media (max-width:1400px) {
-  .section-window { max-width: 99vw; }
+@media (max-width:1200px) {
+  .section-window { max-width: 98vw; }
+  .contact-form-box.horizontal { max-width: 98vw; }
 }
 @media (max-width:900px) {
   .section-window { width: 99vw; }
@@ -451,7 +508,7 @@ header {
     flex-direction: column;
     gap: 18px;
     padding: 18px 12px;
-    min-height: 220px;
+    min-height: 180px;
   }
   .intro-text {
     font-size: 1.10em;
@@ -469,8 +526,20 @@ header {
   .small-title { font-size: 1em; }
   .about-box { max-width: 98vw; }
   .project { max-width: 98vw; }
+  .certifications-list { flex-direction: column; gap: 18px;}
+  .contact-form-box.horizontal {
+    flex-direction: column;
+    align-items: center;
+    padding: 24px 8px;
+    min-height: 180px;
+  }
+  .contact-form-title {
+    margin-right: 0;
+    margin-bottom: 18px;
+    text-align: center;
+    align-self: center;
+  }
 }
-
 @media (max-width:600px) {
   .main-header-nav {
     height: 62px;
@@ -496,9 +565,11 @@ header {
   .section-title-3d { font-size: 1em; }
   .small-title { font-size: .8em; }
   .contact-form { max-width: 99vw; }
+  .section-window { padding: 12px 2px; border-radius: 10px;}
+  .certification-card, .project { min-width: 0; max-width: 98vw; }
+  .contact-form-box.horizontal { padding: 12px 2px; border-radius: 10px;}
 }
 
-/* FOOTER SLIMMER, NO ICONS */
 footer {
   background: #222;
   color: #fff;
