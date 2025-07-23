@@ -9,6 +9,31 @@
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
 </head>
 <body>
+<!-- Minimalist data science SVG background -->
+<div class="ml-bg-svg">
+  <svg viewBox="0 0 1600 900" width="100%" height="100%">
+    <g stroke="#e2e6ea" stroke-width="2" fill="none">
+      <circle cx="400" cy="200" r="18" />
+      <circle cx="850" cy="120" r="13" />
+      <circle cx="1300" cy="220" r="14" />
+      <circle cx="1150" cy="680" r="12" />
+      <circle cx="600" cy="720" r="16" />
+      <circle cx="320" cy="670" r="10" />
+      <line x1="400" y1="200" x2="850" y2="120" />
+      <line x1="400" y1="200" x2="600" y2="720" />
+      <line x1="850" y1="120" x2="1300" y2="220" />
+      <line x1="1300" y1="220" x2="1150" y2="680" />
+      <line x1="600" y1="720" x2="1150" y2="680" />
+      <line x1="320" y1="670" x2="600" y2="720" />
+    </g>
+    <g stroke="#b8bfc9" stroke-width="1" fill="none" opacity="0.4">
+      <rect x="260" y="60" width="1080" height="780" rx="88"/>
+      <line x1="260" y1="200" x2="1340" y2="200"/>
+      <line x1="400" y1="60" x2="400" y2="840"/>
+      <line x1="850" y1="60" x2="850" y2="840"/>
+    </g>
+  </svg>
+</div>
 
 <header>
   <nav class="main-header-nav">
@@ -76,6 +101,24 @@
         <p>Brief description of the project.</p>
         <a href="#">View Project</a>
       </div>
+      <div class="project">
+        <img src="https://via.placeholder.com/400x200.png?text=Project+4" alt="Project 4">
+        <h3>Project Title</h3>
+        <p>Brief description of the project.</p>
+        <a href="#">View Project</a>
+      </div>
+      <div class="project">
+        <img src="https://via.placeholder.com/400x200.png?text=Project+5" alt="Project 5">
+        <h3>Project Title</h3>
+        <p>Brief description of the project.</p>
+        <a href="#">View Project</a>
+      </div>
+      <div class="project">
+        <img src="https://via.placeholder.com/400x200.png?text=Project+6" alt="Project 6">
+        <h3>Project Title</h3>
+        <p>Brief description of the project.</p>
+        <a href="#">View Project</a>
+      </div>
     </div>
   </div>
 </section>
@@ -101,7 +144,6 @@
     <div class="certifications-area">
       <div class="certifications-title">My Certifications</div>
       <div class="certifications-list">
-        <!-- Placeholder for future certifications -->
         <div class="certification-card empty">
           <span class="cert-icon"><i class="fas fa-certificate"></i></span>
           <div class="cert-info">
@@ -125,14 +167,13 @@
         </div>
       </div>
     </div>
-    <!-- END CERTIFICATIONS AREA -->
   </div>
 </section>
 
 <!-- 4. CONTACT -->
 <section class="main-section contact-section" id="contact">
   <div class="section-window info-window contact-window">
-    <div class="contact-form-box horizontal">
+    <div class="contact-form-flex">
       <div class="contact-form-title">Contact Me</div>
       <form class="contact-form">
         <input type="text" placeholder="Name" required>
@@ -194,7 +235,7 @@ document.addEventListener("DOMContentLoaded", function() {
   setInterval(animateWelcome, 30000);
 });
 
-// SCROLL ANCHOR: smooth scroll and center
+// Smooth scroll for header buttons
 document.querySelectorAll('a.header-btn').forEach(btn => {
   btn.addEventListener('click', function(e) {
     const href = btn.getAttribute('href');
