@@ -437,39 +437,41 @@ header {
 .cert-title { font-size: 1.17em; font-weight: 600; color: #181818; }
 .cert-desc { color: #666; font-size: 0.99em; }
 
-/* CONTACT - PEGADO AL FOOTER Y TÍTULO CORRECTO */
+/* CONTACT - MÁS PEQUEÑA */
 .contact-form-flex {
   width: 100%;
-  max-width: 800px;
-  margin: 0 auto 10px auto; /* menos espacio debajo del formulario */
+  max-width: 520px;      /* antes 800px, ahora más compacto */
+  margin: 0 auto 10px auto;
   display: flex;
   flex-direction: row;
   align-items: center;
   justify-content: center;
-  min-height: 340px;
-  gap: 56px;
+  min-height: 180px;     /* antes 340px, ahora más bajo */
+  gap: 32px;             /* menos separación entre título y formulario */
 }
+
 .contact-form-title {
   color: #222;
-  font-size: 2em;
+  font-size: 1.6em;      /* un poco más pequeño para equilibrar */
   font-weight: 700;
   text-shadow: 0 2px 8px #e0e0e0;
   text-align: left;
   align-self: center;
-  min-width: 180px;
+  min-width: 120px;      /* menos ancho mínimo */
   margin-bottom: 0;
 }
+
 .contact-form {
   background: #fff;
   border-radius: 14px;
-  padding: 1.8em 1.8em;
+  padding: 1.2em 1.2em;  /* menos padding */
   box-shadow: 0 2px 16px #bbbbbb11;
   display: flex;
   flex-direction: column;
   align-items: center;
-  width: 310px;
+  width: 200px;          /* antes 310px, ahora más estrecho */
   min-width: 0;
-  max-width: 370px;
+  max-width: 240px;
 }
 .contact-form input[type="text"],
 .contact-form input[type="tel"],
@@ -512,7 +514,7 @@ header {
   .about-box { max-width: 98vw; }
   .project { max-width: 98vw; }
   .certifications-list { flex-direction: column; gap: 18px;}
-  .contact-form-flex { flex-direction: column; gap: 20px; min-height: 220px;}
+  .contact-form-flex { flex-direction: column; gap: 20px; min-height: 140px;}
   .contact-form-title { text-align: center; margin-bottom: 10px; }
 }
 @media (max-width:600px) {
