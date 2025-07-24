@@ -1,12 +1,45 @@
-<!-- ELIMINADO: <div class="ml-bg-svg"> ... </div> -->
-
-<!-- ... HEADER IGUAL ... -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Guillermo Hernández - Machine Learning Engineer</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="styles.css">
+  <!-- Font Awesome for social icons -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
+</head>
+<body>
+<header>
+  <nav class="main-header-nav">
+    <div class="header-left">
+      <button class="menu-btn" aria-label="Menu">
+        <svg width="28" height="28" viewBox="0 0 28 28">
+          <rect y="5" width="28" height="3.5" rx="2" fill="#343434"/>
+          <rect y="12" width="28" height="3.5" rx="2" fill="#343434"/>
+          <rect y="19" width="28" height="3.5" rx="2" fill="#343434"/>
+        </svg>
+      </button>
+      <a href="docs/CV-GuillermoHernandez_SwDevML.pdf" 
+         target="_blank" 
+         class="cv-btn" 
+         title="Curriculum Vitae">
+        <span class="cv-name">Guillermo Hernández</span>
+        <span class="cv-role">Machine Learning Engineer</span>
+      </a>
+    </div>
+    <div class="header-right">
+      <a class="header-btn" href="#projects">Projects</a>
+      <a class="header-btn" href="#about">About Me</a>
+      <a class="header-btn" href="#contact">Contact</a>
+    </div>
+  </nav>
+</header>
 
 <!-- 1. GENERAL INFO (INTRO) -->
 <section class="main-section intro-section" id="intro">
   <div class="section-window welcome-window">
     <div class="welcome-typewriter-outside" id="welcome-typewriter"></div>
-    <div class="intro-content"> <!-- centrado vertical y horizontal -->
+    <div class="intro-content">
       <div class="intro-text">
         <p>
           My name is Guillermo. I am a software engineer specialized in machine learning, based in Mexico City. I work with tools and libraries such as Python, NumPy, Pandas, Scikit-learn, TensorFlow, and more.
@@ -24,12 +57,92 @@
   <div class="section-window info-window">
     <div class="section-title-3d small-title">My Work</div>
     <div class="projects-grid">
-      <!-- ... tus proyectos ... -->
+      <div class="project">
+        <img src="https://via.placeholder.com/400x200.png?text=Project+1" alt="Project 1">
+        <h3>Project Title</h3>
+        <p>Brief description of the project.</p>
+        <a href="#">View Project</a>
+      </div>
+      <div class="project">
+        <img src="https://via.placeholder.com/400x200.png?text=Project+2" alt="Project 2">
+        <h3>Project Title</h3>
+        <p>Brief description of the project.</p>
+        <a href="#">View Project</a>
+      </div>
+      <div class="project">
+        <img src="https://via.placeholder.com/400x200.png?text=Project+3" alt="Project 3">
+        <h3>Project Title</h3>
+        <p>Brief description of the project.</p>
+        <a href="#">View Project</a>
+      </div>
+      <div class="project">
+        <img src="https://via.placeholder.com/400x200.png?text=Project+4" alt="Project 4">
+        <h3>Project Title</h3>
+        <p>Brief description of the project.</p>
+        <a href="#">View Project</a>
+      </div>
+      <div class="project">
+        <img src="https://via.placeholder.com/400x200.png?text=Project+5" alt="Project 5">
+        <h3>Project Title</h3>
+        <p>Brief description of the project.</p>
+        <a href="#">View Project</a>
+      </div>
+      <div class="project">
+        <img src="https://via.placeholder.com/400x200.png?text=Project+6" alt="Project 6">
+        <h3>Project Title</h3>
+        <p>Brief description of the project.</p>
+        <a href="#">View Project</a>
+      </div>
     </div>
   </div>
 </section>
 
-<!-- 3. ABOUT ME ... igual ... -->
+<!-- 3. ABOUT ME + CERTIFICATIONS -->
+<section class="main-section about-section" id="about">
+  <div class="section-window info-window about-info-window">
+    <div class="section-title-3d small-title">About Me</div>
+    <div class="about-box">
+      <p>
+        I am currently in the final stage of my Software and Network Design Engineering degree at Universidad del Valle de México. With a strong foundation in software development, networks, and data analysis, I am passionate about creating intelligent systems and impactful solutions.
+      </p>
+      <p>Mexico City</p>
+      <p>Universidad del Valle de México</p>
+      <p>Specialization: Machine Learning & Intelligent Systems</p>
+      <div class="social-buttons">
+        <a href="https://www.linkedin.com/in/guillermohzcz" target="_blank" aria-label="LinkedIn"><i class="fab fa-linkedin"></i></a>
+        <a href="https://github.com/guillermohzc" target="_blank" aria-label="GitHub"><i class="fab fa-github"></i></a>
+        <a href="https://www.facebook.com" target="_blank" aria-label="Facebook"><i class="fab fa-facebook"></i></a>
+      </div>
+    </div>
+    <!-- CERTIFICATIONS AREA -->
+    <div class="certifications-area">
+      <div class="certifications-title">My Certifications</div>
+      <div class="certifications-list">
+        <div class="certification-card empty">
+          <span class="cert-icon"><i class="fas fa-certificate"></i></span>
+          <div class="cert-info">
+            <div class="cert-title">Certification Name</div>
+            <div class="cert-desc">Short description (e.g., school, platform, date)</div>
+          </div>
+        </div>
+        <div class="certification-card empty">
+          <span class="cert-icon"><i class="fas fa-certificate"></i></span>
+          <div class="cert-info">
+            <div class="cert-title">Certification Name</div>
+            <div class="cert-desc">Short description (e.g., school, platform, date)</div>
+          </div>
+        </div>
+        <div class="certification-card empty">
+          <span class="cert-icon"><i class="fas fa-certificate"></i></span>
+          <div class="cert-info">
+            <div class="cert-title">Certification Name</div>
+            <div class="cert-desc">Short description (e.g., school, platform, date)</div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
 
 <!-- 4. CONTACT -->
 <section class="main-section contact-section" id="contact">
@@ -50,3 +163,68 @@
 <footer>
   <p>© 2025 - guillermohzc.github.io</p>
 </footer>
+
+<script>
+const typeText = "Welcome";
+let typeInterval = null;
+let blinkInterval = null;
+
+function typeWriterEffect(element, text, speed=90) {
+  element.textContent = "";
+  let i = 0;
+  function typeChar() {
+    if (i <= text.length) {
+      element.innerHTML = `<span>${text.substring(0, i)}</span><span class="type-cursor">\u2588</span>`;
+      i++;
+      typeInterval = setTimeout(typeChar, speed);
+    } else {
+      blinkCursor(element, text);
+    }
+  }
+  typeChar();
+}
+
+function blinkCursor(el, text) {
+  let visible = true;
+  if (blinkInterval) clearInterval(blinkInterval);
+  blinkInterval = setInterval(() => {
+    if (visible) {
+      el.innerHTML = `<span>${text}</span><span class="type-cursor" style="opacity:0">\u2588</span>`;
+    } else {
+      el.innerHTML = `<span>${text}</span><span class="type-cursor">\u2588</span>`;
+    }
+    visible = !visible;
+  }, 520);
+}
+
+function animateWelcome() {
+  const el = document.getElementById('welcome-typewriter');
+  if (!el) return;
+  if (typeInterval) clearTimeout(typeInterval);
+  if (blinkInterval) clearInterval(blinkInterval);
+  typeWriterEffect(el, typeText);
+}
+document.addEventListener("DOMContentLoaded", function() {
+  animateWelcome();
+  setInterval(animateWelcome, 30000);
+});
+
+// Smooth scroll for header buttons
+document.querySelectorAll('a.header-btn').forEach(btn => {
+  btn.addEventListener('click', function(e) {
+    const href = btn.getAttribute('href');
+    if (href && href.startsWith('#')) {
+      e.preventDefault();
+      const section = document.querySelector(href);
+      if (section) {
+        section.scrollIntoView({
+          behavior: "smooth",
+          block: "center"
+        });
+      }
+    }
+  });
+});
+</script>
+</body>
+</html>
